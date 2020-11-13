@@ -1,5 +1,7 @@
 <template>
-  <div class="middle-page">个人</div>
+  <div class="middle-page">
+    
+  </div>
 </template>
 
 <script>
