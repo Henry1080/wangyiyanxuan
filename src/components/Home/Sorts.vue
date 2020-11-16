@@ -1,5 +1,9 @@
 <template>
-  <div class="middle-page">分类</div>
+  <div class="middle-page" style="position:relative">
+    <div class="search">
+      <span>搜索商品,共47686款好物</span>
+    </div>
+  </div>
 </template>
 
 <script>
