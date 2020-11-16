@@ -1,28 +1,38 @@
 <template>
     <div class="page">
+        <div class="top-bar" v-if="isexist">
+            <div class="iconwrap">
+                <i class="u-icon u-icon-hd-miniOpenAppClose close" @click="deltopbar"></i>
+            </div>
+            <div class="imgwrap">
+                <img
+                    src="https://yanxuan.nosdn.127.net/1fe7a46449e44c20d508bf514e195c9f.png?type=webp&imageView&thumbnail=750x0&quality=75"
+                />
+            </div>
+        </div>
         <keep-alive>
             <component :is="componentName"></component>
         </keep-alive>
         <div class="bottom-bar">
             <div class="bottom-button" @click="btnClick('first')">
-                <div class="bottom-img bottom-img1" :class="{active1:componentName=='first'}"></div>
-                <div class="bottom-title" :class="{active:componentName=='first'}">首页</div>
+                <i class="bottom-img bottom-img1" :class="{ active1: componentName == 'first' }"></i>
+                <span class="bottom-title" :class="{ active: componentName == 'first' }">首页</span>
             </div>
             <div class="bottom-button" @click="btnClick('sorts')">
-                <div class="bottom-img bottom-img2" :class="{active2:componentName=='sorts'}"></div>
-                <div class="bottom-title" :class="{active:componentName=='sorts'}">分类</div>
+                <div class="bottom-img bottom-img2" :class="{ active2: componentName == 'sorts' }"></div>
+                <div class="bottom-title" :class="{ active: componentName == 'sorts' }">分类</div>
             </div>
             <div class="bottom-button" @click="btnClick('buy')">
-                <div class="bottom-img bottom-img3" :class="{active3:componentName=='buy'}"></div>
-                <div class="bottom-title" :class="{active:componentName=='buy'}">值得买</div>
+                <div class="bottom-img bottom-img3" :class="{ active3: componentName == 'buy' }"></div>
+                <div class="bottom-title" :class="{ active: componentName == 'buy' }">值得买</div>
             </div>
             <div class="bottom-button" @click="btnClick('carts')">
-                <div class="bottom-img bottom-img4" :class="{active4:componentName=='carts'}"></div>
-                <div class="bottom-title" :class="{active:componentName=='carts'}">购物车</div>
+                <div class="bottom-img bottom-img4" :class="{ active4: componentName == 'carts' }"></div>
+                <div class="bottom-title" :class="{ active: componentName == 'carts' }">购物车</div>
             </div>
-            <div class="bottom-button" @click="btnClick('personage')">
-                <div class="bottom-img bottom-img5" :class="{active5:componentName=='personage'}"></div>
-                <div class="bottom-title" :class="{active:componentName=='personage'}">个人</div>
+            <div class="bottom-button" @click="topersonage">
+                <div class="bottom-img bottom-img5"></div>
+                <div class="bottom-title">个人</div>
             </div>
         </div>
     </div>
@@ -33,7 +43,6 @@ import First from "./Home/First.vue";
 import Sorts from "./Home/Sorts.vue";
 import Buy from "./Home/Buy.vue";
 import Carts from "./Home/Carts.vue";
-import Personage from "./Home/Personage.vue";
 
 export default {
     data() {
@@ -41,17 +50,32 @@ export default {
             componentName: "first",
         };
     },
+    computed: {
+        isexist() {
+            return this.$store.state.isexist;
+        },
+    },
     components: {
         first: First,
         sorts: Sorts,
         buy: Buy,
         carts: Carts,
-        personage: Personage,
     },
     methods: {
         btnClick(componentName) {
             this.componentName = componentName;
         },
+        topersonage() {
+            this.$router.push({
+                path: "/e",
+            });
+        },
+        deltopbar() {
+            this.$store.commit("deltopbar");
+        },
+        // go(e){
+        //     window.location = e;
+        // }
     },
 };
 </script>
@@ -62,23 +86,70 @@ export default {
     flex-direction: column;
     justify-content: space-between;
 }
-.bottom-bar {
+.top-bar {
     flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    background-color: #fafafa;
-    border-top: 1px solid #d9d9d9;
-    padding-top: 0.16rem;
+    height: 1.38667rem;
+    opacity: 1;
+    transition: opacity 0.2s;
+    overflow: hidden;
+    background-color: rgb(170, 36, 36);
+    position: relative;
+    z-index: 2;
+}
+.iconwrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
 }
 
+.u-icon-hd-miniOpenAppClose {
+    background-image: url(https://yanxuan-static.nosdn.127.net/hxm/yanxuan-node-wap/style/img/hd-4de7d1dc8847215399843e49de640d68.png);
+    display: inline-block;
+    vertical-align: top;
+    background-size: 3.1733333333333333rem 2.7066666666666666rem;
+    width: 0.5066666666666667rem;
+    height: 0.5066666666666667rem;
+    background-position: -0.6666666666666666rem -2.12rem;
+}
+.imgwrap {
+    width: 100%;
+    height: 100%;
+}
+/* .imgwrap > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+} */
+.imgwrap img {
+    width: 100%;
+    height: 100%;
+}
+.bottom-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 6;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.30667rem;
+    background: #fff;
+    border-top: 1px solid #d9d9d9;
+}
 .bottom-button {
-    width: 20%;
-    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-
 .bottom-img {
     background-image: url(http://localhost:8080/logo2.png);
     display: inline-block;
@@ -118,12 +189,13 @@ export default {
     background-position: -1.12rem -1.12rem;
 }
 .bottom-title {
-    font-size: 13px;
-    color: #333;
-    margin-top: 5px;
+    display: block;
+    margin-top: .09333rem;
+    font-size: .32rem;
+    color: #666;
+    line-height: 1;
 }
 .active {
     color: #dd1a21;
 }
-
 </style>

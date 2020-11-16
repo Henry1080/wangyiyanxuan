@@ -3,17 +3,17 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
-
+    isexist: true,
   },
   mutations: {
-
+    deltopbar(state) {
+      state.isexist = false;
+    },
   },
   actions: {
 
   },
-  modules: {
-    
-  }
-})
+});
+export default store;

@@ -5,7 +5,8 @@
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style>
@@ -20,16 +21,25 @@ html {
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+body{
+    line-height: 1.5;
+    color: #333;
+    font-family: PingFangSC-Light,helvetica,Heiti SC;
+}
 html,
 body,
 #app,.page{
     height: 100%;
 }
 a {
+    cursor: pointer;
     text-decoration: none;
 }
 
 li {
     list-style: none;
+}
+i{
+    font-style:normal;
 }
 </style>

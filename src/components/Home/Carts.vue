@@ -8,7 +8,7 @@ export default {
 }
 </script>
 
-<style>
+<style  scoped>
   .middle-page {
     flex-grow: 1;
     overflow: auto;
