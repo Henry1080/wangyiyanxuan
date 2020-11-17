@@ -1,5 +1,5 @@
 <template>
-<div class=".middle-page">
+<div class="middle-page">
    <div class="car" style="height: 100%">
         <div class="mycar">
             <span class="left" style="font-size: .48rem;">购物车</span>

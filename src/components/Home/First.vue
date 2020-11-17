@@ -1,140 +1,145 @@
 <template>
-    <div class="middle-page page-component__scroll">
-        <div class="m-indexHd">
-            <div class="line">
-                <a class="logo" href="https://m.you.163.com/"></a>
-                <div class="m-topSearchIpt ipt">
-                    <i class="icon u-icon-hd-search2"></i>
-                    <span class="placeholder">搜索商品, 共47629款好物</span>
+    <div class="middle-page" @scroll="fun1">
+        <div class="container" style="height:71.09px">
+            <div class="m-indexHd" :class="{isactive:isshow2}">
+                <div class="line">
+                    <a class="logo" href="https://m.you.163.com/"></a>
+                    <div class="m-topSearchIpt ipt">
+                        <i class="icon u-icon-hd-search2"></i>
+                        <span class="placeholder">搜索商品, 共47629款好物</span>
+                    </div>
+                    <div class="loginBtn" @click="topersonage">登录</div>
                 </div>
-                <div class="loginBtn" @click="topersonage">登录</div>
-            </div>
-            <div class="tabWrap">
-                <div class="tabAlter" v-show="allCate">全部频道</div>
-                <div class="m-tabs scroll" v-show="atab">
-                    <header>
-                        <div class="inner">
-                            <div class="list">
+                <div class="tabWrap">
+                    <div class="tabAlter" v-show="allCate">全部频道</div>
+                    <div class="m-tabs scroll" v-show="atab">
+                        <header>
+                            <div class="inner">
                                 <div
-                                    class="tab"
-                                    :class="{ active: activeName == 'one' }"
-                                    @click="tabClick('one')"
+                                    class="list"
+                                    style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);"
                                 >
-                                    <span class="txt">推荐</span>
-                                </div>
-                                <div
-                                    class="tab"
-                                    :class="{ active: activeName == 'two' }"
-                                    @click="tabClick('two')"
-                                >
-                                    <span class="txt">居家生活</span>
-                                </div>
-                                <div
-                                    class="tab"
-                                    :class="{ active: activeName == 'three' }"
-                                    @click="tabClick('three')"
-                                >
-                                    <span class="txt">服饰鞋包</span>
-                                </div>
-                                <div
-                                    class="tab"
-                                    :class="{ active: activeName == 'four' }"
-                                    @click="tabClick('four')"
-                                >
-                                    <span class="txt">美食酒水</span>
-                                </div>
-                                <div
-                                    class="tab"
-                                    :class="{ active: activeName == 'five' }"
-                                    @click="tabClick('five')"
-                                >
-                                    <span class="txt">个护清洁</span>
-                                </div>
-                                <div
-                                    class="tab"
-                                    :class="{ active: activeName == 'six' }"
-                                    @click="tabClick('six')"
-                                >
-                                    <span class="txt">母婴亲子</span>
-                                </div>
-                                <div
-                                    class="tab"
-                                    :class="{ active: activeName == 'seven' }"
-                                    @click="tabClick('seven')"
-                                >
-                                    <span class="txt">运动旅行</span>
-                                </div>
-                                <div
-                                    class="tab"
-                                    :class="{ active: activeName == 'eight' }"
-                                    @click="tabClick('eight')"
-                                >
-                                    <span class="txt">数码家电</span>
-                                </div>
-                                <div
-                                    class="tab"
-                                    :class="{ active: activeName == 'nine' }"
-                                    @click="tabClick('nine')"
-                                >
-                                    <span class="txt">严选全球</span>
+                                    <div
+                                        class="tab"
+                                        :class="{ active: activeName == 'one' }"
+                                        @click="tabClick('one')"
+                                    >
+                                        <span class="txt">推荐</span>
+                                    </div>
+                                    <div
+                                        class="tab"
+                                        :class="{ active: activeName == 'two' }"
+                                        @click="tabClick('two')"
+                                    >
+                                        <span class="txt">居家生活</span>
+                                    </div>
+                                    <div
+                                        class="tab"
+                                        :class="{ active: activeName == 'three' }"
+                                        @click="tabClick('three')"
+                                    >
+                                        <span class="txt">服饰鞋包</span>
+                                    </div>
+                                    <div
+                                        class="tab"
+                                        :class="{ active: activeName == 'four' }"
+                                        @click="tabClick('four')"
+                                    >
+                                        <span class="txt">美食酒水</span>
+                                    </div>
+                                    <div
+                                        class="tab"
+                                        :class="{ active: activeName == 'five' }"
+                                        @click="tabClick('five')"
+                                    >
+                                        <span class="txt">个护清洁</span>
+                                    </div>
+                                    <div
+                                        class="tab"
+                                        :class="{ active: activeName == 'six' }"
+                                        @click="tabClick('six')"
+                                    >
+                                        <span class="txt">母婴亲子</span>
+                                    </div>
+                                    <div
+                                        class="tab"
+                                        :class="{ active: activeName == 'seven' }"
+                                        @click="tabClick('seven')"
+                                    >
+                                        <span class="txt">运动旅行</span>
+                                    </div>
+                                    <div
+                                        class="tab"
+                                        :class="{ active: activeName == 'eight' }"
+                                        @click="tabClick('eight')"
+                                    >
+                                        <span class="txt">数码家电</span>
+                                    </div>
+                                    <div
+                                        class="tab"
+                                        :class="{ active: activeName == 'nine' }"
+                                        @click="tabClick('nine')"
+                                    >
+                                        <span class="txt">严选全球</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </header>
-                </div>
-
-                <div class="toggleWrap">
-                    <div class="linear"></div>
-                    <div class="toggle" :class="{ toggleActive: allCate }" @click="allCatetab">
-                        <div class="icon"></div>
+                        </header>
                     </div>
-                </div>
-                <div class="moreCate" v-show="allCate">
-                    <div
-                        class="cateTag"
-                        :class="{ cateTagactive: active2Name == 'one' }"
-                        @click="tabClick2('one')"
-                    >推荐</div>
-                    <div
-                        class="cateTag"
-                        :class="{ cateTagactive: active2Name == 'two' }"
-                        @click="tabClick2('two')"
-                    >居家生活</div>
-                    <div
-                        class="cateTag"
-                        :class="{ cateTagactive: active2Name == 'three' }"
-                        @click="tabClick2('three')"
-                    >服饰鞋包</div>
-                    <div
-                        class="cateTag"
-                        :class="{ cateTagactive: active2Name == 'four' }"
-                        @click="tabClick2('four')"
-                    >美食酒水</div>
-                    <div
-                        class="cateTag"
-                        :class="{ cateTagactive: active2Name == 'five' }"
-                        @click="tabClick2('five')"
-                    >个护清洁</div>
-                    <div
-                        class="cateTag"
-                        :class="{ cateTagactive: active2Name == 'six' }"
-                        @click="tabClick2('six')"
-                    >母音亲子</div>
-                    <div
-                        class="cateTag"
-                        :class="{ cateTagactive: active2Name == 'seven' }"
-                        @click="tabClick2('seven')"
-                    >运动旅行</div>
-                    <div
-                        class="cateTag"
-                        :class="{ cateTagactive: active2Name == 'eight' }"
-                        @click="tabClick2('eight')"
-                    >数码家电</div>
-                    <div
-                        class="cateTag"
-                        :class="{ cateTagactive: active2Name == 'nine' }"
-                        @click="tabClick2('nine')"
-                    >严选全球</div>
+
+                    <div class="toggleWrap">
+                        <div class="linear"></div>
+                        <div class="toggle" :class="{ toggleActive: allCate }" @click="allCatetab">
+                            <div class="icon"></div>
+                        </div>
+                    </div>
+                    <div class="moreCate" v-show="allCate">
+                        <div
+                            class="cateTag"
+                            :class="{ cateTagactive: active2Name == 'one' }"
+                            @click="tabClick2('one')"
+                        >推荐</div>
+                        <div
+                            class="cateTag"
+                            :class="{ cateTagactive: active2Name == 'two' }"
+                            @click="tabClick2('two')"
+                        >居家生活</div>
+                        <div
+                            class="cateTag"
+                            :class="{ cateTagactive: active2Name == 'three' }"
+                            @click="tabClick2('three')"
+                        >服饰鞋包</div>
+                        <div
+                            class="cateTag"
+                            :class="{ cateTagactive: active2Name == 'four' }"
+                            @click="tabClick2('four')"
+                        >美食酒水</div>
+                        <div
+                            class="cateTag"
+                            :class="{ cateTagactive: active2Name == 'five' }"
+                            @click="tabClick2('five')"
+                        >个护清洁</div>
+                        <div
+                            class="cateTag"
+                            :class="{ cateTagactive: active2Name == 'six' }"
+                            @click="tabClick2('six')"
+                        >母音亲子</div>
+                        <div
+                            class="cateTag"
+                            :class="{ cateTagactive: active2Name == 'seven' }"
+                            @click="tabClick2('seven')"
+                        >运动旅行</div>
+                        <div
+                            class="cateTag"
+                            :class="{ cateTagactive: active2Name == 'eight' }"
+                            @click="tabClick2('eight')"
+                        >数码家电</div>
+                        <div
+                            class="cateTag"
+                            :class="{ cateTagactive: active2Name == 'nine' }"
+                            @click="tabClick2('nine')"
+                        >严选全球</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,8 +159,8 @@
                         <i
                             class="u-icon u-icon-index-servicePolicy special-icon"
                             style="
-                                background-image: url('https://yanxuan.nosdn.127.net/a03dd909803b9ac032eba58b7253a2f6.png');
-                            "
+                background-image: url('https://yanxuan.nosdn.127.net/a03dd909803b9ac032eba58b7253a2f6.png');
+              "
                         ></i>
                         <span class="text">网易自营品牌</span>
                     </a>
@@ -165,8 +170,8 @@
                         <i
                             class="u-icon u-icon-index-servicePolicy special-icon"
                             style="
-                                background-image: url('https://yanxuan.nosdn.127.net/2d0402ffcd52b3ec3b07422681c42a89.png');
-                            "
+                background-image: url('https://yanxuan.nosdn.127.net/2d0402ffcd52b3ec3b07422681c42a89.png');
+              "
                         ></i>
                         <span class="text">30天无忧退货</span>
                     </a>
@@ -176,8 +181,8 @@
                         <i
                             class="u-icon u-icon-index-servicePolicy special-icon"
                             style="
-                                background-image: url('https://yanxuan.nosdn.127.net/eb61ee48e8942dbd1784c9ee75ebe955.png');
-                            "
+                background-image: url('https://yanxuan.nosdn.127.net/eb61ee48e8942dbd1784c9ee75ebe955.png');
+              "
                         ></i>
                         <span class="text">48小时快速退款</span>
                     </a>
@@ -187,11 +192,11 @@
         <div
             class="m-kingKongModule"
             style="
-                background: url('https://yanxuan.nosdn.127.net/fe0bd37a552434cc0d27c1889ff3e1fe.png')
-                    rgb(255, 255, 255);
-            "
+        background: url('https://yanxuan.nosdn.127.net/fe0bd37a552434cc0d27c1889ff3e1fe.png')
+          rgb(255, 255, 255);
+      "
         >
-            <div v-for="item in modulelist">
+            <div v-for="item in modulelist" :key="item.id">
                 <a :href="item.url" class="kingkong-item mb-9">
                     <div class="icon">
                         <img class="img" :src="item.img" alt />
@@ -204,27 +209,27 @@
             href="https://act.you.163.com/act/pub/WYWjjqrCaOWX.html"
             class="m-indexBigPromotionModule"
             style="
-                background-color: initial;
-                background-image: none;
-                background-size: 100% 100%;
-            "
+        background-color: initial;
+        background-image: none;
+        background-size: 100% 100%;
+      "
         >
             <div class="floor floorTop" style="height: 4.28444rem">
                 <a
                     class="promItem promItem-1"
                     style="
-                        background-image: url('https://yanxuan.nosdn.127.net/c267451e10bc75f513770f14f1232ddc.gif?imageView&quality=75');
-                        background-size: 100% 100%;
-                    "
+            background-image: url('https://yanxuan.nosdn.127.net/c267451e10bc75f513770f14f1232ddc.gif?imageView&quality=75');
+            background-size: 100% 100%;
+          "
                 ></a>
             </div>
             <div class="floor floorFirst" style="height: 1.06667rem">
                 <a
                     class="promItem promItem-1"
                     style="
-                        background-image: url('https://yanxuan.nosdn.127.net/5f3f87d0e21eadcd780c4aafeb2cda00.jpg?quality=75&type=webp&imageView&thumbnail=750x0');
-                        background-size: 100% 100%;
-                    "
+            background-image: url('https://yanxuan.nosdn.127.net/5f3f87d0e21eadcd780c4aafeb2cda00.jpg?quality=75&type=webp&imageView&thumbnail=750x0');
+            background-size: 100% 100%;
+          "
                 ></a>
             </div>
         </a>
@@ -337,7 +342,7 @@
                         </div>
                         <div class="line2" v-for="item in bangdanlist" :key="item.id">
                             <a :href="item.url" class="item">
-                                <div class="name">{{item.txt}}</div>
+                                <div class="name">{{ item.txt }}</div>
                                 <div class="imgWrap">
                                     <div class="m-lazyload undefined m-lazyload-loaded">
                                         <img :src="item.img" alt class="swiper-lazy" />
@@ -369,10 +374,10 @@
                                         </div>
                                         <!-- <div class="desc">配赠马克杯，单手可握，3秒即热，7档调温，折叠设计</div> -->
                                     </div>
-                                    <div class="name">{{item.name}}</div>
+                                    <div class="name">{{ item.name }}</div>
                                     <!-- <div class="newItemDesc">配赠马克杯，单手可握，3秒即热，7档调温，折叠设计</div> -->
                                     <div class="price">
-                                        <span class="priceInner">{{item.price}}</span>
+                                        <span class="priceInner">{{ item.price }}</span>
                                     </div>
                                 </div>
                             </li>
@@ -383,8 +388,8 @@
             <div class="lazy-component-wrapper">
                 <div class="m-sceneLightShoppingGuideModule">
                     <div class="m-styleBanner">
-                        <div class="title" style="color: rgb(51, 51, 51);">超值专区</div>
-                        <div class="desc" style="color: rgb(127, 127, 127); ">低至9.9元</div>
+                        <div class="title" style="color: rgb(51, 51, 51)">超值专区</div>
+                        <div class="desc" style="color: rgb(127, 127, 127)">低至9.9元</div>
                         <div class="picList">
                             <img
                                 src="https://yanxuan-item.nosdn.127.net/6f4174968ff47cb68d1f5dd4edb569cb.png?quality=75&type=webp&imageView&thumbnail=150x150"
@@ -399,8 +404,8 @@
                         </div>
                     </div>
                     <div class="m-styleBanner">
-                        <div class="title" style="color: rgb(51, 51, 51);">员工精选</div>
-                        <div class="desc" style="color: rgb(127, 127, 127); ">天天内部价</div>
+                        <div class="title" style="color: rgb(51, 51, 51)">员工精选</div>
+                        <div class="desc" style="color: rgb(127, 127, 127)">天天内部价</div>
                         <div class="picList">
                             <img
                                 src="https://yanxuan-item.nosdn.127.net/44b26f36153072a5cc6dd253aab3cb82.png?quality=75&type=webp&imageView&thumbnail=150x150"
@@ -437,7 +442,23 @@
                 </div>
             </div>
         </div>
-        
+        <el-backtop target=".middle-page" :bottom="57.6" :right="11.04">
+            <div
+                style="
+           {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        "
+            >
+                <img
+                    src="https://yanxuan-static.nosdn.127.net/hxm/yanxuan-node-wap/style/img/go-1d03abe0594ead4dabcf6bb70fc54966.png"
+                    width="100%"
+                    height="100%"
+                />
+            </div>
+        </el-backtop>
     </div>
 </template>
 
@@ -453,6 +474,7 @@ export default {
             modulelist: [],
             bangdanlist: [],
             newproductlist: [],
+            isshow2: false,
             swiperOptions: {
                 pagination: {
                     el: ".swiper-pagination",
@@ -470,6 +492,28 @@ export default {
     computed: {
         swiper() {
             return this.$refs.mySwiper.$swiper;
+        },
+        isexist() {
+            return this.$store.state.isexist;
+        },
+        isshow() {
+            return this.$store.state.isshow;
+        },
+    },
+    watch: {
+        "$store.state.isexist"(newVal) {
+            if (newVal == false) {
+                this.isshow2 = true;
+            } else if (newVal == true) {
+                this.isshow2 = false;
+            }
+        },
+        "$store.state.isshow"(newVal) {
+            if (newVal == false) {
+                this.isshow2 = true;
+            } else if (newVal == true) {
+                this.isshow2 = false;
+            }
         },
     },
     created() {
@@ -505,6 +549,9 @@ export default {
                 path: "/e",
             });
         },
+        fun1() {
+            this.$store.commit("fun1");
+        },
     },
 };
 </script>
@@ -531,6 +578,13 @@ export default {
 .m-indexHd {
     background-color: #fff;
     border-bottom: 1px solid #d9d9d9;
+    position: fixed !important;
+    left: 0;
+    top: 1.38667rem;
+    z-index: 11;
+}
+.isactive {
+    top: 0;
 }
 .m-indexHd .line {
     position: relative;
@@ -605,9 +659,9 @@ export default {
     padding-left: 0.4rem;
     font-size: 0.37333rem;
 }
-.m-indexHd .tabWrap .m-tabs {
+/* .m-indexHd .tabWrap .m-tabs {
     padding-right: 1.33333rem;
-}
+} */
 .m-tabs {
     width: 100%;
     height: 0.8rem;
@@ -636,9 +690,6 @@ export default {
     flex-shrink: 0;
     padding: 0 0.4rem;
     background: #fff;
-    transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
-    transition-duration: 0ms;
-    transform: translate(0px, 0px) translateZ(0px);
 }
 .m-tabs.scroll > header .tab:first-of-type {
     margin-left: 0;

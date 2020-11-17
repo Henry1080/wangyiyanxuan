@@ -1,8 +1,6 @@
 <template>
     <div class="middle-page">
         值得买
-        <!-- <router-link to="https://m.you.163.com/topic/index#/"></router-link>
-        <route-view></route-view> -->
     </div>
 </template>
 

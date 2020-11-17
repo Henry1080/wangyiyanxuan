@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <div class="top-bar" v-if="isexist">
+        <div class="top-bar" v-if="isexist" v-show="isshow">
             <div class="iconwrap">
                 <i class="u-icon u-icon-hd-miniOpenAppClose close" @click="deltopbar"></i>
             </div>
@@ -22,10 +22,14 @@
                 <div class="bottom-img bottom-img2" :class="{ active2: componentName == 'sorts' }"></div>
                 <div class="bottom-title" :class="{ active: componentName == 'sorts' }">分类</div>
             </div>
-            <div class="bottom-button" @click="btnClick('buy')">
+            <a
+                href="https://m.you.163.com/topic/index#/"
+                class="bottom-button"
+                @click="btnClick('buy')"
+            >
                 <div class="bottom-img bottom-img3" :class="{ active3: componentName == 'buy' }"></div>
                 <div class="bottom-title" :class="{ active: componentName == 'buy' }">值得买</div>
-            </div>
+            </a>
             <div class="bottom-button" @click="btnClick('carts')">
                 <div class="bottom-img bottom-img4" :class="{ active4: componentName == 'carts' }"></div>
                 <div class="bottom-title" :class="{ active: componentName == 'carts' }">购物车</div>
@@ -35,30 +39,46 @@
                 <div class="bottom-title">个人</div>
             </div>
         </div>
+        <div id="1605572681952" v-show="isactive">
+            <div class="m-userTypeModal">
+                <div class="msk"></div>
+                <i class="u-icon u-icon-index-modalClose close"></i>
+                <div class="wrap">
+                    <div
+                        class="modal"
+                        style="height: 11rem; background-image: url('https://yanxuan.nosdn.127.net/61694f382ffef2efadc058087405c59f.png?quality=75&type=webp&imageView'); background-size: 100% 100%;"
+                    ></div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 import First from "./Home/First.vue";
 import Sorts from "./Home/Sorts.vue";
-import Buy from "./Home/Buy.vue";
+// import Buy from "./Home/Buy.vue";
 import Carts from "./Home/Carts.vue";
 
 export default {
     data() {
         return {
             componentName: "first",
+            isactive: false,
         };
     },
     computed: {
         isexist() {
             return this.$store.state.isexist;
         },
+        isshow() {
+            return this.$store.state.isshow;
+        },
     },
     components: {
         first: First,
         sorts: Sorts,
-        buy: Buy,
+        // buy: Buy,
         carts: Carts,
     },
     methods: {
@@ -73,9 +93,6 @@ export default {
         deltopbar() {
             this.$store.commit("deltopbar");
         },
-        // go(e){
-        //     window.location = e;
-        // }
     },
 };
 </script>
@@ -190,12 +207,31 @@ export default {
 }
 .bottom-title {
     display: block;
-    margin-top: .09333rem;
-    font-size: .32rem;
+    margin-top: 0.09333rem;
+    font-size: 0.32rem;
     color: #666;
     line-height: 1;
 }
 .active {
     color: #dd1a21;
 }
+.m-userTypeModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+.m-userTypeModal>.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+
+
 </style>
