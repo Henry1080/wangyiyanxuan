@@ -1,9 +1,9 @@
 <template>
-<div class="middle-page">
+<div class="middle-page1">
    <div class="car" style="height: 100%">
         <div class="mycar">
-            <span class="left" style="font-size: .48rem;">购物车</span>
-            <span class="right" style="vertical-align: middle;color: #DD1A21; font-size: .4rem">领卷</span>
+            <span class="left" style="font-size: .48rem;padding-left: 20px">购物车</span>
+            <span class="right" style="vertical-align: middle;color: #DD1A21; font-size: .4rem;float: right;line-height: 54px;padding-right: 20px">领劵</span>
         </div>
         <div class="chengnuo">
            <div class="item"> <i></i> <span>30天无忧退货</span></div>
@@ -13,7 +13,7 @@
         </div>
         <div class="m-defaultPage">
             <div class="img"></div>
-            <div class="text" @click="$router.push('/login_d')">登录</div>
+            <div class="text" @click="$router.push('/Login')">登录</div>
         </div>
     </div>
     </div>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style  scoped>
-  .middle-page {
+  .middle-page1 {
     flex-grow: 1;
     overflow: auto;
     background: rgb(247, 247, 247);
@@ -52,7 +52,6 @@ export default {
     }
     .m-defaultPage {
         position: relative;
-        height: 100%;
         background-color: #f4f4f4;
     }
     .m-defaultPage .img {
@@ -60,7 +59,7 @@ export default {
         top: 4rem;
         left: 50%;
         transform: translateX(-50%);
-        background-image: url();
+        background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noCart-d6193bd6e4.png?imageView&type=webp);
         display: inline-block;
         vertical-align: middle;
         width: 3.30667rem;
@@ -83,5 +82,6 @@ export default {
         color: #fff;
         background-color: #DD1A21;
         border-radius: .04rem;
+        text-align: center;
     }
 </style>
