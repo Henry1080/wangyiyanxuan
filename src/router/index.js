@@ -7,7 +7,6 @@ import Logind from "../components/Home/Logind.vue";
 import Carts from "../components/Home/Carts";
 import GoodsD from "../components/Home/GoodsD.vue"
 import Personal from "../components/Home/Personal";
-import First from "../components/Home/First";
 
 Vue.use(VueRouter)
 
@@ -37,10 +36,6 @@ const routes = [{
   },{
     path: "/Personal",
     component: Personal
-  },
-  {
-    path: "/First",
-    component: First
   },
 ]
 

@@ -5,7 +5,7 @@
             <div class="bd">
                 <div class="row">
                     <!-- 首页图标 -->
-                    <a class="u-icon-u-icon-home" @click="$router.push('/First')"></a>
+                    <a class="u-icon-u-icon-home" @click="$router.push('/')"></a>
                     <i class="logo u-icon u-icon-logo"></i>
                     <div class="right">
                         <!-- 搜索图标 -->

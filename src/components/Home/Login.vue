@@ -1,11 +1,11 @@
 <template>
-    <div class="page">
-        <div id="j-bd" class="g-bd">
+    <div class="page1">
+        <!-- <div id="j-bd" class="g-bd"> -->
             <!-- 头部 -->
             <div class="bd">
                 <div class="row">
                     <!-- 首页图标 -->
-                    <a class="u-icon-u-icon-home" @click="$router.push('/First')"></a>
+                    <a class="u-icon-u-icon-home" @click="$router.push('/')"></a>
                     <i class="logo u-icon u-icon-logo"></i>
                     <div class="right">
                         <!-- 搜索图标 -->
@@ -15,8 +15,6 @@
                     </div>
                 </div>
             </div>
-            <div class="logoWrap">
-                <img src="https://yanxuan.nosdn.127.net/39c5e4583753d4c3cb868a64c2c109ea.png" alt />
             <!-- 第二部分:LOGO,登录框 -->
             <div class="view">
                 <!-- logo -->
@@ -58,12 +56,12 @@
                                     <span>我同意</span>
                                     <a
                                         target="_blank"
-                                        href="//https://reg.163.com/agreement_mobile_wap.shtml" class="fuwu">
+                                        href="https://reg.163.com/agreement_mobile_wap.shtml" class="fuwu">
                                         
                                     《服务条款》</a>
                                     <span>和</span>
                                     <a
-                                        href="//https://reg.163.com/agreement_mobile_ysbh_wap.shtml"
+                                        href="https://reg.163.com/agreement_mobile_ysbh_wap.shtml"
                                         target="_blank"
                                         class="wangyi"
                                     >《网易隐私政策》</a>
@@ -78,7 +76,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 
@@ -105,10 +103,11 @@
     }
 </script>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
+<style scoped>
+.page1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .bd {
     height: 1.16rem;
@@ -131,7 +130,7 @@
     justify-content: space-between;
 }
 .u-icon-u-icon-home {
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
+    background-image: url(https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
     width: 0.64rem;
     height: 0.58667rem;
     background-position: 0 -0.98667rem;
@@ -146,7 +145,7 @@
     bottom: 0;
     left: 0;
     margin: auto;
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
+    background-image: url(https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
     width: 2.29333rem;
     height: 0.72rem;
     background-position: 0 -1.70667rem;
@@ -156,7 +155,7 @@
 .u-icon-search1 {
     position: relative;
     bottom: 0;
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
+    background-image: url(https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
     background-size: 2.29333rem 5.6rem;
     width: 0.85333rem;
     height: 0.85333rem;
@@ -169,7 +168,7 @@
 }
 .u-icon-cart {
     position: relative;
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
+    background-image: url(https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
     background-size: 2.29333rem 5.6rem;
     width: 0.85333rem;
     height: 0.85333rem;
@@ -304,7 +303,7 @@ input {
     margin-left: 0.05333rem;
     position: relative;
     top: 0;
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/arrow-right3-6264a71cf0.png?imageView&type=webp);
+    background-image: url(https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/arrow-right3-6264a71cf0.png?imageView&type=webp);
     background-size: 100% 100%;
     width: 0.37333rem;
     height: 0.37333rem;

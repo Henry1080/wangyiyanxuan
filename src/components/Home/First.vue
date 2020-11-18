@@ -205,8 +205,7 @@
                 </li>
             </ul>
         </div>
-        <div
-            class="m-kingKongModule"
+        <div class="m-kingKongModule"
             style="
         background: url('https://yanxuan.nosdn.127.net/fe0bd37a552434cc0d27c1889ff3e1fe.png')
           rgb(255, 255, 255);

@@ -1,6 +1,6 @@
 <template>
     <div class="cartpage">
-         <div class="top-bar" v-if="isexist">
+         <!-- <div class="top-bar" v-if="isexist">
             <div class="iconwrap">
                 <i class="u-icon u-icon-hd-miniOpenAppClose close" @click="deltopbar"></i>
             </div>
@@ -9,7 +9,7 @@
                     src="https://yanxuan.nosdn.127.net/1fe7a46449e44c20d508bf514e195c9f.png?type=webp&imageView&thumbnail=750x0&quality=75"
                 />
             </div>
-        </div>
+        </div> -->
         <div class="middle-page1">
             <div class="car" style="height: 100%">
                 <div class="mycar">

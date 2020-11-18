@@ -28,7 +28,7 @@
         <div class="main">
             <div class="swiperwrap">
                 <swiper ref="mySwiper" :options="swiperOptions">
-                    <swiper-slide v-for="item in piclist">
+                    <swiper-slide v-for="item in piclist" :key="item.id">
                         <img :src="item.img" />
                     </swiper-slide>
                     <div class="swiper-pagination" slot="pagination"></div>
