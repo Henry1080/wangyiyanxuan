@@ -6,6 +6,9 @@ import Login from "../components/Home/Login.vue";
 import Logind from "../components/Home/Logind.vue";
 import Carts from "../components/Home/Carts";
 import GoodsD from "../components/Home/GoodsD.vue"
+import Personal from "../components/Home/Personal";
+import First from "../components/Home/First";
+
 Vue.use(VueRouter)
 
 const routes = [{
@@ -31,7 +34,14 @@ const routes = [{
   {
     path: "/GoodsD",
     component: GoodsD
-  }
+  },{
+    path: "/Personal",
+    component: Personal
+  },
+  {
+    path: "/First",
+    component: First
+  },
 ]
 
 const router = new VueRouter({
