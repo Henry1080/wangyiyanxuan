@@ -6,6 +6,7 @@ import Login from "../components/Home/Login.vue";
 import Logind from "../components/Home/Logind.vue";
 import Carts from "../components/Home/Carts";
 import Personal from "../components/Home/Personal";
+import First from "../components/Home/First";
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,10 @@ const routes = [{
   {
     path: "/Personal",
     component: Personal
+  },
+  {
+    path: "/First",
+    component: First
   },
 ]
 

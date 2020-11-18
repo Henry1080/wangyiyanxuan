@@ -5,13 +5,13 @@
             <div class="bd">
                 <div class="row">
                     <!-- 首页图标 -->
-                    <a class="u-icon-u-icon-home"></a>
+                    <a class="u-icon-u-icon-home" @click="$router.push('/First')"></a>
                     <i class="logo u-icon u-icon-logo"></i>
                     <div class="right">
                         <!-- 搜索图标 -->
                         <a class="u-icon-search1"></a>
                         <!-- 购物车图标 -->
-                        <a class="u-icon-cart" ></a>
+                        <a class="u-icon-cart" @click="$router.push('/Carts')"></a>
                     </div>
                 </div>
             </div>

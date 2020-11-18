@@ -5,7 +5,7 @@
             <div class="bd">
                 <div class="row">
                     <!-- 首页图标 -->
-                    <a class="u-icon-u-icon-home"></a>
+                    <a class="u-icon-u-icon-home" @click="$router.push('/First')"></a>
                     <i class="logo u-icon u-icon-logo"></i>
                     <div class="right">
                         <!-- 搜索图标 -->
@@ -49,7 +49,7 @@
                         </p>
                         <div class="box1">
                             <span class="u-zcagree">
-                                <input type="checkbox" class="zc-un-login" />
+                                <input type="checkbox" class="zc-un-login" checked="true" background-color="#fff"/>
                             </span>
                             <div class="fur-item">
                                 <label>
