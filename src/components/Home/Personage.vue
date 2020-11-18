@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page">
         <div class="top-bar" v-if="isexist">
             <div class="iconwrap">
                 <i class="u-icon u-icon-hd-miniOpenAppClose close" @click="deltopbar"></i>
@@ -75,27 +75,20 @@ export default {
     },
     computed: {
         isexist() {
-            return this.$store.state.isexist
-        }
+            return this.$store.state.isexist;
+        },
     },
     methods: {
         deltopbar() {
-            this.$store.commit("deltopbar")
+            this.$store.commit("deltopbar");
         },
-        
     },
 };
 </script>
 
 <style scoped>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.page {
+.m-loginTypes {
     flex-grow: 1;
-    overflow: auto;
     background: rgb(247, 247, 247);
 }
 .bd {
@@ -119,7 +112,7 @@ export default {
     justify-content: space-between;
 }
 .u-icon-u-icon-home {
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
+    background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp");
     width: 0.64rem;
     height: 0.58667rem;
     background-position: 0 -0.98667rem;
@@ -134,7 +127,7 @@ export default {
     bottom: 0;
     left: 0;
     margin: auto;
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
+    background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp");
     width: 2.29333rem;
     height: 0.72rem;
     background-position: 0 -1.70667rem;
@@ -144,7 +137,7 @@ export default {
 .u-icon-search1 {
     position: relative;
     bottom: 0;
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
+    background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp");
     background-size: 2.29333rem 5.6rem;
     width: 0.85333rem;
     height: 0.85333rem;
@@ -157,7 +150,7 @@ export default {
 }
 .u-icon-cart {
     position: relative;
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp);
+    background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp");
     background-size: 2.29333rem 5.6rem;
     width: 0.85333rem;
     height: 0.85333rem;
@@ -206,7 +199,7 @@ export default {
     margin-right: 0.21333rem;
     position: relative;
     top: -0.02667rem;
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/login-s5ca4cb2b91-2c606efd24.png?imageView&type=webp);
+    background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/login-s5ca4cb2b91-2c606efd24.png?imageView&type=webp");
     background-size: 0.53333rem 3.86667rem;
     background-position: 0 -0.66667rem;
     background-position-x: 0px;
@@ -251,7 +244,7 @@ span {
     margin-right: 0.21333rem;
     position: relative;
     top: -0.02667rem;
-    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/login-s5ca4cb2b91-2c606efd24.png?imageView&type=webp);
+    background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/login-s5ca4cb2b91-2c606efd24.png?imageView&type=webp");
     background-size: 0.53333rem 3.86667rem;
     background-position: 0 0;
     background-position-x: 0px;

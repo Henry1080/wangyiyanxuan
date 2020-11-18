@@ -242,7 +242,7 @@ export default {
     background-color: #ededed;
     border-radius: 0.10667rem;
 }
-.u-icon-hd-search2{
+.u-icon-hd-search2 {
     display: inline-block;
     width: 0.37333rem;
     height: 0.37333rem;
@@ -316,8 +316,11 @@ export default {
     margin-left: 2.16rem;
     padding: 0.4rem 0.4rem 0.28rem;
     height: 100%;
-    overflow-y: auto;
     background-color: #fff;
+    overflow: auto;
+}
+.m-subCateList::-webkit-scrollbar {
+    display: none;
 }
 .m-subCateContainer .banner {
     position: relative;
@@ -333,7 +336,8 @@ export default {
     height: 2.56rem;
 }
 .m-subCateContainer .cateList {
-    margin-bottom: .16rem;
+    width: 100%;
+    margin-bottom: 0.16rem;
     overflow: hidden;
 }
 .m-subCateContainer .hd {
@@ -341,22 +345,25 @@ export default {
     white-space: nowrap;
     overflow: hidden;
     max-width: 7.04rem;
-    padding-bottom: .10667rem;
-    margin-bottom: .32rem;
+    padding-bottom: 0.10667rem;
+    margin-bottom: 0.32rem;
     text-align: left;
-    font-size: .37333rem;
+    font-size: 0.37333rem;
     font-weight: 700;
     color: #333;
 }
-.m-subCateContainer .hd.active{
+.m-subCateContainer .hd.active {
     border-bottom: 1px solid #d9d9d9;
 }
 .m-subCateContainer .cateItem {
     display: inline-block;
-    margin-right: .45333rem;
+    margin-right: 0.45333rem;
     font-size: 0;
     width: 1.92rem;
     vertical-align: top;
+}
+.m-subCateContainer .cateItem:nth-child(3n) {
+    margin-right: -0.13333rem;
 }
 .m-subCateContainer .cateItem .cateImgWrapper {
     width: 1.92rem;
@@ -365,7 +372,8 @@ export default {
 .u-icon-hd-water {
     background-position: 0 -1.7333333333333334rem;
 }
-.u-icon-hd-search2, .u-icon-hd-water {
+.u-icon-hd-search2,
+.u-icon-hd-water {
     background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-node-wap/style/img/hd-4de7d1dc8847215399843e49de640d68.png");
     display: inline-block;
     vertical-align: middle;
@@ -377,20 +385,16 @@ export default {
     background: #fff;
     height: 100%;
 }
-.m-subCateContainer .cateItem:nth-child(3n) {
-    margin-right: -.13333rem;
-}
 .m-subCateContainer .cateItem .name {
-    height: .96rem;
-    font-size: .32rem;
+    height: 0.96rem;
+    font-size: 0.32rem;
     color: #333;
     text-align: center;
-    line-height: .48rem;
+    line-height: 0.48rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 </style>

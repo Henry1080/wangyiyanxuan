@@ -1,5 +1,5 @@
 <template>
-    <div class="hasHd isOpenAppClosed">
+    <div class="page">
         <div id="j-bd" class="g-bd">
             <div class="bd">
                 <div class="row">
@@ -14,28 +14,19 @@
                     </div>
                 </div>
             </div>
-              <div class="logoWrap">
-                    <img
-                        src="https://yanxuan.nosdn.127.net/39c5e4583753d4c3cb868a64c2c109ea.png"
-                        alt
-                    />
-                </div>
+            <div class="logoWrap">
+                <img src="https://yanxuan.nosdn.127.net/39c5e4583753d4c3cb868a64c2c109ea.png" alt />
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-
-
 </script>
 
-<style>
-*{
-    margin: 0;
-    padding: 0;
-
-}
-        .bd {
+<style scoped>
+/* .page{} */
+.bd {
     height: 1.16rem;
     background-color: #fafafa;
     position: relative;
@@ -113,5 +104,4 @@
     width: 3.57333rem;
     height: 1.2rem;
 }
-
 </style>

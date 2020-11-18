@@ -17,18 +17,18 @@ export default {
 }
 
 html {
-    font-size: 36px;
-    text-size-adjust: 100%;
+    /* text-size-adjust: 100%; */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-body{
+body {
     line-height: 1.5;
     color: #333;
-    font-family: PingFangSC-Light,helvetica,Heiti SC;
+    font-family: PingFangSC-Light, helvetica, Heiti SC;
 }
 html,
 body,
-#app,.page{
+#app,
+.page {
     height: 100%;
 }
 a {
@@ -39,7 +39,7 @@ a {
 li {
     list-style: none;
 }
-i{
-    font-style:normal;
+i {
+    font-style: normal;
 }
 </style>

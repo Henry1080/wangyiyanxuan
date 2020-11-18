@@ -26,62 +26,70 @@
                                     >
                                         <span class="txt">推荐</span>
                                     </div>
-                                    <div
+                                    <a
+                                        href="https://m.you.163.com/item/list?categoryId=1005000"
                                         class="tab"
                                         :class="{ active: activeName == 'two' }"
                                         @click="tabClick('two')"
                                     >
                                         <span class="txt">居家生活</span>
-                                    </div>
-                                    <div
+                                    </a>
+                                    <a
+                                        href="https://m.you.163.com/item/list?categoryId=1010000"
                                         class="tab"
                                         :class="{ active: activeName == 'three' }"
                                         @click="tabClick('three')"
                                     >
                                         <span class="txt">服饰鞋包</span>
-                                    </div>
-                                    <div
+                                    </a>
+                                    <a
+                                        href="https://m.you.163.com/item/list?categoryId=1005002"
                                         class="tab"
                                         :class="{ active: activeName == 'four' }"
                                         @click="tabClick('four')"
                                     >
                                         <span class="txt">美食酒水</span>
-                                    </div>
-                                    <div
+                                    </a>
+                                    <a
+                                        href="https://m.you.163.com/item/list?categoryId=1013001"
                                         class="tab"
                                         :class="{ active: activeName == 'five' }"
                                         @click="tabClick('five')"
                                     >
                                         <span class="txt">个护清洁</span>
-                                    </div>
-                                    <div
+                                    </a>
+                                    <a
+                                        href="https://m.you.163.com/item/list?categoryId=1011000"
                                         class="tab"
                                         :class="{ active: activeName == 'six' }"
                                         @click="tabClick('six')"
                                     >
                                         <span class="txt">母婴亲子</span>
-                                    </div>
-                                    <div
+                                    </a>
+                                    <a
+                                        href="https://m.you.163.com/item/list?categoryId=109243029"
                                         class="tab"
                                         :class="{ active: activeName == 'seven' }"
                                         @click="tabClick('seven')"
                                     >
                                         <span class="txt">运动旅行</span>
-                                    </div>
-                                    <div
+                                    </a>
+                                    <a
+                                        href="https://m.you.163.com/item/list?categoryId=1043000"
                                         class="tab"
                                         :class="{ active: activeName == 'eight' }"
                                         @click="tabClick('eight')"
                                     >
                                         <span class="txt">数码家电</span>
-                                    </div>
-                                    <div
+                                    </a>
+                                    <a
+                                        href="https://m.you.163.com/item/list?categoryId=1019000"
                                         class="tab"
                                         :class="{ active: activeName == 'nine' }"
                                         @click="tabClick('nine')"
                                     >
                                         <span class="txt">严选全球</span>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </header>
@@ -99,46 +107,54 @@
                             :class="{ cateTagactive: active2Name == 'one' }"
                             @click="tabClick2('one')"
                         >推荐</div>
-                        <div
+                        <a
+                            href="https://m.you.163.com/item/list?categoryId=1005000"
                             class="cateTag"
                             :class="{ cateTagactive: active2Name == 'two' }"
                             @click="tabClick2('two')"
-                        >居家生活</div>
-                        <div
+                        >居家生活</a>
+                        <a
+                            href="https://m.you.163.com/item/list?categoryId=1010000"
                             class="cateTag"
                             :class="{ cateTagactive: active2Name == 'three' }"
                             @click="tabClick2('three')"
-                        >服饰鞋包</div>
-                        <div
+                        >服饰鞋包</a>
+                        <a
+                            href="https://m.you.163.com/item/list?categoryId=1005002"
                             class="cateTag"
                             :class="{ cateTagactive: active2Name == 'four' }"
                             @click="tabClick2('four')"
-                        >美食酒水</div>
-                        <div
+                        >美食酒水</a>
+                        <a
+                            href="https://m.you.163.com/item/list?categoryId=1013001"
                             class="cateTag"
                             :class="{ cateTagactive: active2Name == 'five' }"
                             @click="tabClick2('five')"
-                        >个护清洁</div>
-                        <div
+                        >个护清洁</a>
+                        <a
+                            href="https://m.you.163.com/item/list?categoryId=1011000"
                             class="cateTag"
                             :class="{ cateTagactive: active2Name == 'six' }"
                             @click="tabClick2('six')"
-                        >母音亲子</div>
-                        <div
+                        >母音亲子</a>
+                        <a
+                            href="https://m.you.163.com/item/list?categoryId=109243029"
                             class="cateTag"
                             :class="{ cateTagactive: active2Name == 'seven' }"
                             @click="tabClick2('seven')"
-                        >运动旅行</div>
-                        <div
+                        >运动旅行</a>
+                        <a
+                            href="https://m.you.163.com/item/list?categoryId=1043000"
                             class="cateTag"
                             :class="{ cateTagactive: active2Name == 'eight' }"
                             @click="tabClick2('eight')"
-                        >数码家电</div>
-                        <div
+                        >数码家电</a>
+                        <a
+                            href="https://m.you.163.com/item/list?categoryId=1019000"
                             class="cateTag"
                             :class="{ cateTagactive: active2Name == 'nine' }"
                             @click="tabClick2('nine')"
-                        >严选全球</div>
+                        >严选全球</a>
                     </div>
                 </div>
             </div>
@@ -364,7 +380,12 @@
                     </div>
                     <div class="m-indexItem m-goodGrid">
                         <ul class="list">
-                            <li class="item" v-for="item in newproductlist" :key="item.id">
+                            <li
+                                class="item"
+                                v-for="item in newproductlist"
+                                :key="item.id"
+                                @click="toGoodsD(item)"
+                            >
                                 <div class="good">
                                     <div class="hd">
                                         <div class="wraper">
@@ -483,9 +504,10 @@ export default {
                     bulletActiveClass: "my-bullet-active",
                 },
                 loop: true,
-                autoplay: {
-                    disableOnInteraction: false,
-                },
+                autoplay:true,
+                // autoplay: {
+                //     disableOnInteraction: false,
+                // },
             },
         };
     },
@@ -551,6 +573,14 @@ export default {
         },
         fun1() {
             this.$store.commit("fun1");
+        },
+        toGoodsD(item) {
+            this.$router.push({
+                path: "./GoodsD",
+                query: {
+                    id: item.id,
+                },
+            });
         },
     },
 };
@@ -698,6 +728,7 @@ export default {
     margin-left: 0.26667rem;
 }
 .m-tabs.scroll > header .tab {
+    display: block;
     flex-shrink: 0;
     position: relative;
     margin-left: 0.64rem;
@@ -773,6 +804,8 @@ export default {
     font-size: 0.32rem;
 }
 .m-indexHd .tabWrap .moreCate .cateTag {
+    display: block;
+    color: #333;
     width: 2rem;
     height: 0.74667rem;
     line-height: 0.74667rem;

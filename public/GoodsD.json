@@ -1,0 +1,26 @@
+{
+    "code": 200,
+    "status": "成功",
+    "piclist":[
+        {
+            "id": "01", 
+            "img":"https://yanxuan-item.nosdn.127.net/9cd26a0c0f09e9a1c00221f981a70398.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "02", 
+            "img":"https://yanxuan-item.nosdn.127.net/97426eb4a0f380027b8ccf8262b42ece.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "03", 
+            "img":"https://yanxuan-item.nosdn.127.net/d3fa178f7941876614fc47f14ed03e91.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "04", 
+            "img":"https://yanxuan-item.nosdn.127.net/a5595e480dc72ca4e0ea698804d564fa.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "05", 
+            "img":"https://yanxuan-item.nosdn.127.net/d1430013aa80d952f938e16258b23b6e.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        }
+    ]
+}
