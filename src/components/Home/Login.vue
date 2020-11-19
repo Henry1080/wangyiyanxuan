@@ -204,6 +204,7 @@
     border: none;
     border-bottom: 1px solid #e5e5e5;
     outline: none;
+    margin-bottom: 31px;
 }
 .input2 {
     margin-top: 15px;
@@ -212,7 +213,8 @@
     height: 15%;
     font-size: 13px;
     font-weight: bold;
-    line-height: 350%;
+    line-height: 0%;
+    margin-top: -34px;
 }
 .tabfocus-getsmscode {
     display: inline-block;
@@ -227,7 +229,7 @@
     border: 1px solid #7f7f7f;
     position: absolute;
     right: 0;
-    top: 16%;
+    top: 21%;
 }
 .register-content-p {
     height: 15%;
@@ -245,7 +247,6 @@
 }
 .denglu {
     height: 20%;
-    margin-top: 20px;
 }
 .denglu a {
     width: 100%;
@@ -276,7 +277,7 @@ input {
 }
 .fur-item {
     position: absolute;
-    top: 228px;
+    top: 173px;
     left: 21px;
 }
 .fur-item a {
@@ -297,15 +298,19 @@ input {
 }
 .btn-btn1 {
     text-align: center;
+    margin-top: 20px;
 }
 .icon-arrow-right {
     display: inline-block;
     margin-left: 0.05333rem;
     position: relative;
-    top: 0;
+    top: 1.8px;
     background-image: url(https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/arrow-right3-6264a71cf0.png?imageView&type=webp);
     background-size: 100% 100%;
     width: 0.37333rem;
     height: 0.37333rem;
+}
+.box1{
+    margin-top: 2px;
 }
 </style>

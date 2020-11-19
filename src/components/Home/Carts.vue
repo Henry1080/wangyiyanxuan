@@ -16,7 +16,7 @@
                     <span class="left" style="font-size: .48rem;padding-left: 20px">购物车</span>
                     <span
                         class="right"
-                        style="vertical-align: middle;color: #DD1A21; font-size: .4rem;float: right;line-height: 54px;padding-right: 20px"
+                        style="vertical-align: middle;color: #DD1A21; font-size: .4rem;float: right;line-height: 30px;padding-right: 20px"
                     >领劵</span>
                 </div>
                 <div class="chengnuo">
@@ -74,6 +74,7 @@ export default {
     justify-content: space-around;
     background: #eee;
     height: 0.9333rem;
+    width: 100%;
 }
 .chengnuo .item {
     display: flex;
