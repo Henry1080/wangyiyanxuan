@@ -1,11 +1,15 @@
 <template>
     <div id="app">
-        <router-view></router-view>
+        <keep-alive>
+            <router-view v-if="$route.meta.keepalive"></router-view>
+            <router-view v-if="!$route.meta.keepalive"></router-view>
+        </keep-alive>
     </div>
 </template>
 
 <script>
 export default {
+    
 };
 </script>
 

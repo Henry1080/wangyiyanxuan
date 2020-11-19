@@ -10,9 +10,7 @@
                 />
             </div>
         </div>
-        <keep-alive>
-            <component :is="componentName"></component>
-        </keep-alive>
+        <component :is="componentName"></component>
         <div class="bottom-bar">
             <div class="bottom-button" @click="btnClick('first')">
                 <i class="bottom-img bottom-img1" :class="{ active1: componentName == 'first' }"></i>
@@ -39,10 +37,10 @@
                 <div class="bottom-title">个人</div>
             </div>
         </div>
-        <div id="1605572681952" v-show="isactive">
+        <div id="1605572681952" v-if="isactive3">
             <div class="m-userTypeModal">
                 <div class="msk"></div>
-                <i class="u-icon u-icon-index-modalClose close"></i>
+                <i class="u-icon u-icon-index-modalClose close" @click="delAd"></i>
                 <div class="wrap">
                     <div
                         class="modal"
@@ -57,14 +55,13 @@
 <script>
 import First from "./Home/First.vue";
 import Sorts from "./Home/Sorts.vue";
-// import Buy from "./Home/Buy.vue";
 import Carts from "./Home/Carts.vue";
 
 export default {
     data() {
         return {
             componentName: "first",
-            isactive: false,
+            isactive3: true,
         };
     },
     computed: {
@@ -78,7 +75,6 @@ export default {
     components: {
         first: First,
         sorts: Sorts,
-        // buy: Buy,
         carts: Carts,
     },
     methods: {
@@ -92,6 +88,9 @@ export default {
         },
         deltopbar() {
             this.$store.commit("deltopbar");
+        },
+        delAd() {
+            this.isactive3 = false;
         },
     },
 };
@@ -223,15 +222,40 @@ export default {
     bottom: 0;
     z-index: 9999;
 }
-.m-userTypeModal>.mask {
+.m-userTypeModal .msk {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
-
-
+.m-userTypeModal .close {
+    position: fixed;
+    right: 0.4rem;
+    top: 0.8rem;
+    z-index: 2;
+}
+.u-icon-index-modalClose {
+    width: 0.8533333333333334rem;
+    height: 0.8533333333333334rem;
+    background-position: -1.68rem -3.92rem;
+}
+.u-icon-index-modalClose {
+    background-image: url(https://yanxuan-static.nosdn.127.net/hxm/yanxuan-node-wap/style/img/index-20a8c6c35d0ec7b54782d2098282371f.png);
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 5.013333333333334rem 5.013333333333334rem;
+}
+.m-userTypeModal > .wrap {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+.m-userTypeModal > .wrap .modal {
+    width: 7.2rem;
+}
 </style>

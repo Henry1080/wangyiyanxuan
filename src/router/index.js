@@ -12,7 +12,10 @@ Vue.use(VueRouter)
 
 const routes = [{
     path: "/",
-    component: home
+    component: home,
+    meta: {
+      keepalive: true // 组件是否需要被保存
+  }
   },
   {
     path: "/e",
@@ -40,7 +43,7 @@ const routes = [{
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
 })
 
 export default router

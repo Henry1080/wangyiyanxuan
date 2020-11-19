@@ -205,7 +205,8 @@
                 </li>
             </ul>
         </div>
-        <div class="m-kingKongModule"
+        <div
+            class="m-kingKongModule"
             style="
         background: url('https://yanxuan.nosdn.127.net/fe0bd37a552434cc0d27c1889ff3e1fe.png')
           rgb(255, 255, 255);
@@ -503,10 +504,7 @@ export default {
                     bulletActiveClass: "my-bullet-active",
                 },
                 loop: true,
-                autoplay:true,
-                // autoplay: {
-                //     disableOnInteraction: false,
-                // },
+                autoplay: true,
             },
         };
     },
@@ -528,6 +526,9 @@ export default {
             } else if (newVal == true) {
                 this.isshow2 = false;
             }
+            if (newVal == false) {
+                $store.state.isshow = false;
+            }
         },
         "$store.state.isshow"(newVal) {
             if (newVal == false) {
@@ -536,23 +537,6 @@ export default {
                 this.isshow2 = false;
             }
         },
-    },
-    created() {
-        let url = "http://localhost:8080/database.json";
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", url);
-        xhr.send();
-        let that = this;
-        xhr.onload = function () {
-            that.swiper1List = JSON.parse(xhr.response).list1;
-            that.modulelist = JSON.parse(xhr.response).list2;
-            that.bangdanlist = JSON.parse(xhr.response).list3;
-            that.newproductlist = JSON.parse(xhr.response).list4;
-        };
-    },
-    mounted() {
-        console.log("Current Swiper instance object", this.swiper);
-        this.swiper.slideTo(1, 2000, false);
     },
     methods: {
         tabClick(item) {
@@ -581,6 +565,23 @@ export default {
                 },
             });
         },
+    },
+    created() {
+        let url = "http://localhost:8080/database.json";
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.send();
+        let that = this;
+        xhr.onload = function () {
+            that.swiper1List = JSON.parse(xhr.response).list1;
+            that.modulelist = JSON.parse(xhr.response).list2;
+            that.bangdanlist = JSON.parse(xhr.response).list3;
+            that.newproductlist = JSON.parse(xhr.response).list4;
+        };
+    },
+    mounted() {
+        // console.log("Current Swiper instance object", this.swiper);
+        // this.swiper.slideTo(1, 2000, false);
     },
 };
 </script>
