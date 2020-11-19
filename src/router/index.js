@@ -7,10 +7,22 @@ import Logind from "../components/Home/Logind.vue";
 import Carts from "../components/Home/Carts";
 import GoodsD from "../components/Home/GoodsD.vue"
 import Personal from "../components/Home/Personal";
+import Search from "../components/Home/Search"
 
 Vue.use(VueRouter)
 
-const routes = [{
+const routes = [
+  // {
+  //   children:[
+  //     { path: '/Personage/:id', component: Personage},
+  //     { path: '/First/:id', component: First},
+  //     { path: '/Carts/:id', component: Carts},
+  //     { path: '/Sorts/:id', component: Sorts},
+  //     { path: '/GoodsD/:id', component: GoodsD},
+  //     { path: '/Personal/:id', component: Personal},
+  //   ]
+  // },
+  {
     path: "/",
     component: home
   },
@@ -33,9 +45,14 @@ const routes = [{
   {
     path: "/GoodsD",
     component: GoodsD
-  },{
+  },
+  {
     path: "/Personal",
     component: Personal
+  },
+  {
+    path: "/Search",
+    component: Search
   },
 ]
 
