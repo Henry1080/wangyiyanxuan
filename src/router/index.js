@@ -12,16 +12,6 @@ import Search from "../components/Home/Search"
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   children:[
-  //     { path: '/Personage/:id', component: Personage},
-  //     { path: '/First/:id', component: First},
-  //     { path: '/Carts/:id', component: Carts},
-  //     { path: '/Sorts/:id', component: Sorts},
-  //     { path: '/GoodsD/:id', component: GoodsD},
-  //     { path: '/Personal/:id', component: Personal},
-  //   ]
-  // },
   {
     path: "/",
     component: home,

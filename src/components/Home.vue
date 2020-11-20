@@ -32,7 +32,7 @@
                 <div class="bottom-img bottom-img4" :class="{ active4: componentName == 'carts' }"></div>
                 <div class="bottom-title" :class="{ active: componentName == 'carts' }">购物车</div>
             </div>
-            <div class="bottom-button" @click="topersonage">
+            <div class="bottom-button" @click="topersonage" >
                 <div class="bottom-img bottom-img5"></div>
                 <div class="bottom-title">个人</div>
             </div>

@@ -6,7 +6,7 @@
                     <a class="logo" href="https://m.you.163.com/"></a>
                     <div class="m-topSearchIpt ipt">
                         <i class="icon u-icon-hd-search2"></i>
-                        <span class="placeholder">搜索商品, 共47629款好物</span>
+                        <span class="placeholder"  @click="$router.push('/Search')">搜索商品, 共47629款好物</span>
                     </div>
                     <div class="loginBtn" @click="topersonage">登录</div>
                 </div>
