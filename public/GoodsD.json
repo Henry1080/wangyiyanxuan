@@ -1,0 +1,76 @@
+{
+    "code": 200,
+    "status": "成功",
+    "piclist":[
+        {
+            "id": "01", 
+            "img":"https://yanxuan-item.nosdn.127.net/9cd26a0c0f09e9a1c00221f981a70398.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "02", 
+            "img":"https://yanxuan-item.nosdn.127.net/97426eb4a0f380027b8ccf8262b42ece.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "03", 
+            "img":"https://yanxuan-item.nosdn.127.net/d3fa178f7941876614fc47f14ed03e91.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "04", 
+            "img":"https://yanxuan-item.nosdn.127.net/a5595e480dc72ca4e0ea698804d564fa.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "05", 
+            "img":"https://yanxuan-item.nosdn.127.net/d1430013aa80d952f938e16258b23b6e.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        }
+    ],
+    "goodslist":[
+        {
+            "id":"01",
+            "img":"https://yanxuan-item.nosdn.127.net/62519bd1c78ea583ed3ed39f620134e0.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "price1":"￥56.8",
+            "price2":"￥62",
+            "desc":"好货内部价，仅剩4天",
+            "name":"2020新果上市，临安山核桃仁 150克"
+        },
+        {
+            "id":"02",
+            "img":"https://yanxuan-item.nosdn.127.net/ca123e1f1fac9af57df06a14d91e6417.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "price1":"￥49",
+            "price2":"",
+            "desc":"醇正红松香 2020年新货",
+            "name":"2020年新货上市，东北开口松子 150克"
+        },
+        {
+            "id":"03",
+            "img":"https://yanxuan-item.nosdn.127.net/ba308b3ab4f3ca0f86a070aa50f56e1b.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "price1":"￥99",
+            "price2":"",
+            "desc":"壳薄如纸，肉如象牙",
+            "name":"2020新果上市，薄壳巴基斯坦松子 130克"
+        },
+        {
+            "id":"04",
+            "img":"https://yanxuan-item.nosdn.127.net/98bb1d2027c85d4ca51953f6b0e73837.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "price1":"￥32.8",
+            "price2":"￥36",
+            "desc":"加州进口，无添加剂",
+            "name":"2020新果上市，加州原香巴旦木 160克"
+        },
+        {
+            "id":"05",
+            "img":"https://yanxuan-item.nosdn.127.net/e282c9cf9a4e99df8762a85cb9768145.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "price1":"￥36",
+            "price2":"",
+            "desc":"2020新货，本色本味",
+            "name":"2020新果上市，越南原香腰果 140克"
+        },
+        {
+            "id":"06",
+            "img":"https://yanxuan-item.nosdn.127.net/824c3a554462c2a6bfca60afd81e3597.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "price1":"￥32",
+            "price2":"",
+            "desc":"粒粒香醇，颗颗饱满",
+            "name":"盐焗腰果 158克"
+        }
+    ]
+}

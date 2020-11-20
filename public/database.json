@@ -1,0 +1,188 @@
+{
+    "code": 200, 
+    "status": "成功", 
+    "list1": [
+        {
+            "id": "01", 
+            "img":"https://yanxuan.nosdn.127.net/a3e417cd2409e7f45a2cf50bf3d50af3.png?type=webp&imageView&quality=75&thumbnail=750x0"
+        }, 
+        {
+            "id": "02", 
+            "img":"https://yanxuan.nosdn.127.net/a9124dee593cad7c52fb67cc986df962.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "03", 
+            "img":"https://yanxuan.nosdn.127.net/7c9e11d4197a13102312a9d5a6da89d6.png?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "04", 
+            "img":"https://yanxuan.nosdn.127.net/3215b82b9bdd9ef7197221cd2d768498.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "05", 
+            "img":"https://yanxuan.nosdn.127.net/85eebd6b9ad3fe23f0757aa81d0ff9cf.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "06", 
+            "img":"https://yanxuan.nosdn.127.net/f7aeadc64dbd6d2f6c103a7b7c0a1cb4.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "07", 
+            "img":"https://yanxuan.nosdn.127.net/21773779ac599c9f9f80896de724d5e4.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        },
+        {
+            "id": "08", 
+            "img":"https://yanxuan.nosdn.127.net/1d1ff7aed02f1320feb00df0b5555f8a.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
+        }
+    ],
+    "list2": [
+        {
+            "id": "01", 
+            "url":"https://m.you.163.com/item/newItem",
+            "img":"https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png",
+            "txt":"新品首发"
+        }, 
+        {
+            "id": "02",
+            "url":"https://m.you.163.com/item/list?categoryId=1005000&style=pd", 
+            "img":"https://yanxuan.nosdn.127.net/fede8b110c502ec5799702d5ec824792.png",
+            "txt":"居家生活"
+        },
+        {
+            "id": "03", 
+            "url":"https://m.you.163.com/item/list?categoryId=1010000&style=pd", 
+            "img":"https://yanxuan.nosdn.127.net/896a3beac514ae8f40aafe028e5fec56.png",
+            "txt":"服饰鞋包"
+        },
+        {
+            "id": "04", 
+            "url":"https://m.you.163.com/item/list?categoryId=1005002&style=pd", 
+            "img":"https://yanxuan.nosdn.127.net/37520d1204a0c55474021b43dac2a69e.png",
+            "txt":"美食酒水"
+        },
+        {
+            "id": "05", 
+            "url":"https://m.you.163.com/item/list?categoryId=1013001&style=pd", 
+            "img":"https://yanxuan.nosdn.127.net/6c3bd9d885c818b1f73e497335a68b47.png",
+            "txt":"个护清洁"
+        },
+        {
+            "id": "06", 
+            "url":"https://m.you.163.com/item/list?categoryId=1011000&style=pd", 
+            "img":"https://yanxuan.nosdn.127.net/559d2a240ec20b096590a902217009ff.png",
+            "txt":"母音亲子"
+        },
+        {
+            "id": "07", 
+            "url":"https://m.you.163.com/item/list?categoryId=109243029&style=pd", 
+            "img":"https://yanxuan.nosdn.127.net/5c088559ebcc3f0ffcda663f04dfbeb2.png",
+            "txt":"运动旅行"
+        },
+        {
+            "id": "08", 
+            "url":"https://m.you.163.com/item/list?categoryId=1043000&style=pd", 
+            "img":"https://yanxuan.nosdn.127.net/fbca8e1f2948f0c09fc7672c2c125384.png",
+            "txt":"数码家电"
+        },
+        {
+            "id": "09", 
+            "url":"https://m.you.163.com/item/list?categoryId=1019000&style=pd", 
+            "img":"https://yanxuan.nosdn.127.net/f7281169d4e82d5d8d52aa1fec83fe01.png",
+            "txt":"全球特色"
+        },
+        {
+            "id": "10", 
+            "url":"https://act.you.163.com/act/pub/OuB7EL0tpQ3Z.html", 
+            "img":"https://yanxuan.nosdn.127.net/12e8efd15b9b210ab156a7ee9b340548.gif",
+            "txt":"好货抄底"
+        }
+    ],
+    "list3": [
+        {
+            "id": "01", 
+            "img":"https://yanxuan-item.nosdn.127.net/22cfd602403ca6a026a439e08e3e3127.png?quality=75&type=webp&imageView&thumbnail=200x200",
+            "txt":"美食酒水榜",
+            "url":"https://m.you.163.com/item/saleRank?categoryId=1005002"
+        }, 
+        {
+            "id": "02", 
+            "img":"https://yanxuan-item.nosdn.127.net/da0321f5813855f287c274e1d8a7cf9f.png?quality=75&type=webp&imageView&thumbnail=200x200",
+            "txt":"居家生活榜",
+            "url":"https://m.you.163.com/item/saleRank?categoryId=1005000"
+        },
+        {
+            "id": "03", 
+            "img":"https://yanxuan-item.nosdn.127.net/6ca4f35ed719057790f63eaeeee354b0.png?quality=75&type=webp&imageView&thumbnail=200x200",
+            "txt":"服饰鞋包榜",
+            "url":"https://m.you.163.com/item/saleRank?categoryId=1010000"
+        },
+        {
+            "id": "04", 
+            "img":"https://yanxuan-item.nosdn.127.net/bcbb4b46320121ab646ac37550ac540a.png?quality=75&type=webp&imageView&thumbnail=200x200",
+            "txt":"严选全球榜",
+            "url":"https://m.you.163.com/item/saleRank?categoryId=1019000"
+        },
+        {
+            "id": "05", 
+            "img":"https://yanxuan-item.nosdn.127.net/7a0e064c1fd99b5eb16608bca9b7aa0d.png?quality=75&type=webp&imageView&thumbnail=200x200",
+            "txt":"个护清洁榜",
+            "url":"https://m.you.163.com/item/saleRank?categoryId=1013001"
+        },
+        {
+            "id": "06", 
+            "img":"https://yanxuan-item.nosdn.127.net/d3995146d91bb8d75f39f397da78caa7.png?quality=75&type=webp&imageView&thumbnail=200x200",
+            "txt":"数码家电榜",
+            "url":"https://m.you.163.com/item/saleRank?categoryId=1043000"
+        },
+        {
+            "id": "07", 
+            "img":"https://yanxuan-item.nosdn.127.net/74662d24f6d217b520178c5a6d031457.png?quality=75&type=webp&imageView&thumbnail=200x200",
+            "txt":"母婴亲子榜",
+            "url":"https://m.you.163.com/item/saleRank?categoryId=1011000"
+        },
+        {
+            "id": "08", 
+            "img":"https://yanxuan-item.nosdn.127.net/fee21ece834e9c2706e53d86e65b8abb.png?quality=75&type=webp&imageView&thumbnail=200x200",
+            "txt":"运动旅行榜",
+            "url":"https://m.you.163.com/item/saleRank?categoryId=109243029"
+        }
+    ],
+    "list4": [
+        {
+            "id": "01", 
+            "img":"https://yanxuan-item.nosdn.127.net/c4ee53599a21293c19c7c46ef1c8b38e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "name":"2020新果上市，南非碧根果仁 150克",
+            "price":"￥46"
+        },
+        {
+            "id": "02", 
+            "img":"https://yanxuan-item.nosdn.127.net/f568b81e67ed94954c5177fa7aab3270.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "name":"吸足10次尿量，婴儿奢柔畅吸纸尿裤 PRO版",
+            "price":"￥89"
+        },
+        {
+            "id": "03", 
+            "img":"https://yanxuan-item.nosdn.127.net/b4892bff6e5ade75b4583da328da20e7.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "name":"眼镜+首饰+手表 ，超声波除菌清洁机pro版",
+            "price":"￥299"
+        },
+        {
+            "id": "04", 
+            "img":"https://yanxuan-item.nosdn.127.net/b4987c9b676f71f2b55b5b6396a4fed5.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "name":"地表强温 女式狐狸毛领收腰短款羽绒服",
+            "price":"￥899"
+        },
+        {
+            "id": "05", 
+            "img":"https://yanxuan-item.nosdn.127.net/c66e336c7d34fde78bd46ce16f17e19e.png?type=webp&imageView&quality=65&thumbnail=330x330",
+            "name":"男女彩虹纯色中筒袜",
+            "price":"￥12.9"
+        },
+        {
+            "id": "06", 
+            "img":"https://yanxuan-item.nosdn.127.net/120a96c1ed31c58548f1021f17a03fe8.jpg?type=webp&imageView&quality=65&thumbnail=330x330",
+            "name":"香氛氨基酸洗护发“蓬蓬瓶” 持久留香养发",
+            "price":"￥79"
+        }
+    ]
+}
