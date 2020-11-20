@@ -1,5 +1,15 @@
 <template>
     <div class="page">
+        <!-- <div class="top-bar" v-if="isexist">
+            <div class="iconwrap">
+                <i class="u-icon u-icon-hd-miniOpenAppClose close" @click="deltopbar"></i>
+            </div>
+            <div class="imgwrap">
+                <img
+                    src="https://yanxuan.nosdn.127.net/1fe7a46449e44c20d508bf514e195c9f.png?type=webp&imageView&thumbnail=750x0&quality=75"
+                />
+            </div>
+        </div> -->
         <div class="m-loginTypes">
             <div class="bd">
                 <div class="row">
@@ -53,7 +63,10 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         
+=======
+>>>>>>> 5648ded787df327a241c78997c3915e25cdabc18
     </div>
 </template>
 

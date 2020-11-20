@@ -6,7 +6,7 @@
                     <a class="logo" href="https://m.you.163.com/"></a>
                     <div class="m-topSearchIpt ipt">
                         <i class="icon u-icon-hd-search2"></i>
-                        <span class="placeholder">搜索商品, 共47629款好物</span>
+                        <span class="placeholder"  @click="$router.push('/Search')">搜索商品, 共47629款好物</span>
                     </div>
                     <div class="loginBtn" @click="topersonage">登录</div>
                 </div>
@@ -678,6 +678,9 @@ export default {
     padding-left: 0.4rem;
     font-size: 0.37333rem;
 }
+/* .m-indexHd .tabWrap .m-tabs {
+    padding-right: 1.33333rem;
+} */
 .m-tabs {
     width: 100%;
     height: 0.8rem;

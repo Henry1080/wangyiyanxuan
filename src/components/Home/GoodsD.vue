@@ -18,7 +18,7 @@
                     <i class="logo u-icon u-icon-logo"></i>
                     <div class="right">
                         <!-- 搜索图标 -->
-                        <a class="u-icon-search1"></a>
+                        <a class="u-icon-search1" @click="$router.push('/Search')"></a>
                         <!-- 购物车图标 -->
                         <a class="u-icon-cart" @click="$router.push('/Carts')"></a>
                     </div>
