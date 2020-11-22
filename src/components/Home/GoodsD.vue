@@ -1,15 +1,5 @@
 <template>
     <div class="page1">
-        <!-- <div class="top-bar" v-if="isexist">
-            <div class="iconwrap">
-                <i class="u-icon u-icon-hd-miniOpenAppClose close" @click="deltopbar"></i>
-            </div>
-            <div class="imgwrap">
-                <img
-                    src="https://yanxuan.nosdn.127.net/1fe7a46449e44c20d508bf514e195c9f.png?type=webp&imageView&thumbnail=750x0&quality=75"
-                />
-            </div>
-        </div>-->
         <div class="title-wrap">
             <div class="bd">
                 <div class="row">
@@ -20,7 +10,7 @@
                         <!-- 搜索图标 -->
                         <a class="u-icon-search1" @click="$router.push('/Search')"></a>
                         <!-- 购物车图标 -->
-                        <a class="u-icon-cart" @click="$router.push('/Carts')"></a>
+                        <a class="u-icon-cart" @click="tocarts"></a>
                     </div>
                 </div>
             </div>
@@ -148,8 +138,7 @@
                     <div class="m-listItem undefined">
                         <div class="inner">
                             <span class="it it11">已选择:</span>
-                            <span class="it">150克</span>
-                            <span class="it">x1</span>
+                            <span class="it">150克x1</span>
                         </div>
                         <i class="icon u-icon u-address-right"></i>
                     </div>
@@ -781,6 +770,9 @@ export default {
         isexist() {
             return this.$store.state.isexist;
         },
+        componentName() {
+            return this.$store.state.componentName;
+        },
     },
     methods: {
         deltopbar() {
@@ -791,10 +783,22 @@ export default {
         },
         addthing() {
             this.$store.commit("addthing");
-            this.$router.push({
-                path: "/Carts",
-            });
+            this.$router.push("/");
+            this.$store.state.componentName = "carts";
+            this.$store.state.cartnumber=1;
         },
+        tocarts() {
+            this.$router.push("/");
+            this.$store.state.componentName = "carts";
+        },
+    },
+    computed: {
+        swiper() {
+            return this.$refs.mySwiper.$swiper;
+        },
+        cartnumber(){
+            return this.$store.state.cartnumber
+        }
     },
     created() {
         let url = "http://localhost:8080/GoodsD.json";
@@ -806,11 +810,6 @@ export default {
             that.piclist = JSON.parse(xhr.response).piclist;
             that.goodslist = JSON.parse(xhr.response).goodslist;
         };
-    },
-    computed: {
-        swiper() {
-            return this.$refs.mySwiper.$swiper;
-        },
     },
     mounted() {
         // console.log("Current Swiper instance object", this.swiper);

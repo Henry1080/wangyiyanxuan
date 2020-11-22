@@ -6,9 +6,9 @@
                     <a class="logo" href="https://m.you.163.com/"></a>
                     <div class="m-topSearchIpt ipt">
                         <i class="icon u-icon-hd-search2"></i>
-                        <span class="placeholder"  @click="$router.push('/Search')">搜索商品, 共47629款好物</span>
+                        <span class="placeholder" @click="$router.push('/Search')">搜索商品, 共47629款好物</span>
                     </div>
-                    <div class="loginBtn" @click="topersonage">登录</div>
+                    <div class="loginBtn" @click="topersonage" v-show="isdenglu== false">登录</div>
                 </div>
                 <div class="tabWrap">
                     <div class="tabAlter" v-show="allCate">全部频道</div>
@@ -507,6 +507,12 @@ export default {
         isshow() {
             return this.$store.state.isshow;
         },
+        isdenglu() {
+            return this.$store.state.isdenglu;
+        },
+        componentName() {
+            return this.$store.state.componentName;
+        },
     },
     watch: {
         "$store.state.isexist"(newVal) {
@@ -539,9 +545,7 @@ export default {
             this.atab = !this.atab;
         },
         topersonage() {
-            this.$router.push({
-                path: "/e",
-            });
+            this.$store.state.componentName = "personage";
         },
         fun1() {
             this.$store.commit("fun1");

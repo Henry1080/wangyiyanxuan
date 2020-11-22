@@ -1,7 +1,7 @@
 <template>
     <div class="hasHd-isOpenAppClosed">
         <div id="j-bd" class="g-bd">
-               <!-- 头部 -->
+            <!-- 头部 -->
             <div class="bd">
                 <div class="row">
                     <!-- 首页图标 -->
@@ -9,13 +9,13 @@
                     <i class="logo u-icon u-icon-logo"></i>
                     <div class="right">
                         <!-- 搜索图标 -->
-                        <a class="u-icon-search1"  @click="$router.push('/Search')"></a>
+                        <a class="u-icon-search1" @click="$router.push('/Search')"></a>
                         <!-- 购物车图标 -->
                         <a class="u-icon-cart" @click="$router.push('/Carts')"></a>
                     </div>
                 </div>
             </div>
-             <!-- 第二部分:LOGO,登录框 -->
+            <!-- 第二部分:LOGO,登录框 -->
             <div class="view">
                 <!-- logo -->
                 <div class="logoWrap">
@@ -28,31 +28,30 @@
             <!-- 登录框 -->
             <div class="register-content">
                 <div class="register-content-div">
-                     <input
-                            type="text"
-                            placeholder="邮箱账号"
-                            class="register-content-input"
-                            v-model.trim="acout"
-                        />
-                         <input
-                            type="password"
-                            placeholder="密码"
-                            class="register-content-input input2"
-                            v-model.trim="pasd"
-                        />
-                         <p class="register-content-p">
-                            <span class="span2">注册账号</span>
-                            <span class="span1">忘记密码</span>
-                        </p>
-                         <p class="denglu">
-                            <a href="#" class="a1" @click="denglu">登录</a>
-                        </p>
+                    <input
+                        type="text"
+                        placeholder="邮箱账号"
+                        class="register-content-input"
+                        v-model.trim="acout"
+                    />
+                    <input
+                        type="password"
+                        placeholder="密码"
+                        class="register-content-input input2"
+                        v-model.trim="pasd"
+                    />
+                    <p class="register-content-p">
+                        <span class="span2">注册账号</span>
+                        <span class="span1">忘记密码</span>
+                    </p>
+                    <p class="denglu">
+                        <a href="#" class="a1" @click="denglu">登录</a>
+                    </p>
 
-                        
-                        <div class="btn-btn1" @click="$router.go(-1)">
-                            <span>其他登录方式</span>
-                            <i class="icon-arrow-right"></i>
-                        </div>
+                    <div class="btn-btn1" @click="$router.go(-1)">
+                        <span>其他登录方式</span>
+                        <i class="icon-arrow-right"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,30 +59,48 @@
 </template>
 
 <script scoped>
-    export default {
-        data(){
-            return{
-                acout:"",
-                pasd:""
+export default {
+    data() {
+        return {
+            acout: "",
+            pasd: "",
+        };
+    },
+    computed: {
+        isdenglu() {
+            return this.$store.state.isdenglu;
+        },
+        bottomButton() {
+            return this.$store.state.bottomButton;
+        },
+        componentName() {
+            return this.$store.state.componentName;
+        },
+    },
+    methods: {
+        denglu() {
+            if (this.acout == "" && this.pasd == "") {
+                alert("请输入账号密码");
+            } else if (
+                this.acout == "17756599558@qq.com" &&
+                this.pasd == "123456"
+            ) {
+                this.acout = "";
+                this.pasd = "";
+                this.$router.push("/");
+                this.$store.state.componentName = "personage";
+                this.$store.state.isdenglu = true;
+                this.$store.state.bottomButton = true;
+            } else {
+                alert("账号17756599558@qq.com密码123456");
             }
         },
-        methods: {
-           denglu(){
-                 if(this.acout==""&&this.pasd==""){
-                alert("请输入账号密码")
-            }else if(this.acout=="17756599558@qq.com"&&this.pasd=="123456"){
-                this.$router.push("/Personal")
-                this.$store.state.denglu=false;
-            }else{
-                alert("账号17756599558@qq.com密码123456")
-            }
-            }
-        }
-    }
+    },
+};
 </script>
 
 <style scoped>
-.hasHd-isOpenAppClosed{
+.hasHd-isOpenAppClosed {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

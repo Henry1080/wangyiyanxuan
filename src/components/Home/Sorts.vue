@@ -3,7 +3,7 @@
         <div class="m-itemCateListHd">
             <div class="m-topSearchIpt ipt">
                 <i class="icon u-icon-hd-search2"></i>
-                <span class="placeholder"  @click="$router.push('/Search')">搜索商品, 共30000+款好物</span>
+                <span class="placeholder" @click="$router.push('/Search')">搜索商品, 共30000+款好物</span>
             </div>
         </div>
         <div class="m-cateContainer" style="height: 549px;">

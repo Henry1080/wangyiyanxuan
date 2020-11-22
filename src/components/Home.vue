@@ -28,15 +28,28 @@
                 class="bottom-button"
                 @click="btnClick('buy')"
             >
-                <div class="bottom-img bottom-img3" :class="{ active3: componentName == 'buy' }"></div>
+                <el-badge is-dot>
+                    <div
+                        class="bottom-img bottom-img3"
+                        :class="{ active3: componentName == 'buy' }"
+                    ></div>
+                </el-badge>
                 <div class="bottom-title" :class="{ active: componentName == 'buy' }">值得买</div>
             </a>
             <div class="bottom-button" @click="btnClick('carts')">
-                <div class="bottom-img bottom-img4" :class="{ active4: componentName == 'carts' }"></div>
+                <el-badge :value=cartnumber>
+                    <div
+                        class="bottom-img bottom-img4"
+                        :class="{ active4: componentName == 'carts' }"
+                    ></div>
+                </el-badge>
                 <div class="bottom-title" :class="{ active: componentName == 'carts' }">购物车</div>
             </div>
-            <div class="bottom-button" @click="btnClick('personage')" >
-                <div class="bottom-img bottom-img5" :class="{ active5: componentName == 'personage' }"></div>
+            <div class="bottom-button" @click="btnClick('personage')">
+                <div
+                    class="bottom-img bottom-img5"
+                    :class="{ active5: componentName == 'personage' }"
+                ></div>
                 <div class="bottom-title" :class="{ active: componentName == 'personage' }">个人</div>
             </div>
         </div>
@@ -63,42 +76,43 @@ import Carts from "./Home/Carts.vue";
 import Personage from "./Home/Personage.vue";
 export default {
     data() {
-        return {
-            componentName: "first",
-            isactive3: true,
-        };
+        return {};
+    },
+    components: {
+        first: First,
+        sorts: Sorts,
+        carts: Carts,
+        personage: Personage,
     },
     computed: {
+        isactive3() {
+            return this.$store.state.isactive3;
+        },
         isexist() {
             return this.$store.state.isexist;
         },
         isshow() {
             return this.$store.state.isshow;
         },
-        bottomButton(){
-            return this.$store.state.bottomButton
+        bottomButton() {
+            return this.$store.state.bottomButton;
+        },
+        componentName() {
+            return this.$store.state.componentName;
+        },
+        cartnumber(){
+            return this.$store.state.cartnumber
         }
     },
-    components: {
-        first: First,
-        sorts: Sorts,
-        carts: Carts,
-        personage:Personage
-    },
     methods: {
-        btnClick(componentName) {
-            this.componentName = componentName;
-        },
-        topersonage() {
-            this.$router.push({
-                path: "/e",
-            });
+        btnClick(item) {
+            this.$store.commit("btnClick", item);
         },
         deltopbar() {
             this.$store.commit("deltopbar");
         },
         delAd() {
-            this.isactive3 = false;
+            this.$store.state.isactive3 = false;
         },
     },
 };
@@ -142,11 +156,6 @@ export default {
     width: 100%;
     height: 100%;
 }
-/* .imgwrap > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-} */
 .imgwrap img {
     width: 100%;
     height: 100%;
@@ -266,4 +275,8 @@ export default {
 .m-userTypeModal > .wrap .modal {
     width: 7.2rem;
 }
+/* .item {
+  margin-top: 10px;
+  margin-right: 40px;
+} */
 </style>

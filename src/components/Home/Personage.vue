@@ -1,21 +1,12 @@
 <template>
-    <div class="page">
-        <!-- <div class="top-bar" v-if="isexist">
-            <div class="iconwrap">
-                <i class="u-icon u-icon-hd-miniOpenAppClose close" @click="deltopbar"></i>
-            </div>
-            <div class="imgwrap">
-                <img
-                    src="https://yanxuan.nosdn.127.net/1fe7a46449e44c20d508bf514e195c9f.png?type=webp&imageView&thumbnail=750x0&quality=75"
-                />
-            </div>
-        </div> -->
-        <div class="m-loginTypes">
+    <div class="page4">
+        <!-- 未登录 -->
+        <div class="m-loginTypes" v-if="isdenglu==false">
             <div class="bd">
                 <div class="row">
                     <!-- 首页图标 -->
-                    <a class="u-icon-u-icon-home" @click="$router.go(-1)"></a>
-                    <i class="logo u-icon u-icon-logo"></i>
+                    <div class="u-icon-u-icon-home" @click="tohomepage"></div>
+                    <div class="logo u-icon u-icon-logo"></div>
                     <div class="right">
                         <!-- 搜索图标 -->
                         <a class="u-icon-search1" @click="$router.push('/Search')"></a>
@@ -63,37 +54,224 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-        
-=======
->>>>>>> 5648ded787df327a241c78997c3915e25cdabc18
+        <!-- 已经登录 -->
+        <div class="profile" v-else>
+            <div class="m-profile">
+                <div class="left">
+                    <img
+                        class="avatar"
+                        src="https://yanxuan.nosdn.127.net/df56828787a99c95d2c493cc3de78c64.jpg"
+                    />
+                    <div class="info">
+                        <p class="nickname">小炫</p>
+                        <div class="membershipLevel">
+                            <span class="membershipLevel">普通用户</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img
+                        src="https://yanxuan.nosdn.127.net/1e58f571cde8227c68ad7342ef40b766.png"
+                        class="surveryIcon"
+                    />
+                    <i class="icon-qrCodeInUcenter"></i>
+                    <div class="m-supermcEntrance">
+                        <i class="u-icon-supermember"></i>
+                        <div class="word">
+                            <div class="line1">Pro会员</div>
+                            <div class="line2">
+                                <span>立即试用</span>
+                                <i class="u-icon-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m-myAsset">
+                <div class="tt">我的资产</div>
+                <div class="assetList">
+                    <div class="assetItem">
+                        <p class="assetCout">
+                            <span class="unit">¥</span>
+                            <span class="value">0</span>
+                        </p>
+                        <p class="assetName">回馈金</p>
+                    </div>
+                    <div class="assetItem">
+                        <p class="assetCout">
+                            <!-- <span class="unit">¥</span> -->
+                            <span class="value">2</span>
+                        </p>
+                        <p class="assetName">红包</p>
+                    </div>
+                    <div class="assetItem">
+                        <p class="assetCout">
+                            <!-- <span class="unit">¥</span> -->
+                            <span class="value">0</span>
+                        </p>
+                        <p class="assetName">优惠卷</p>
+                    </div>
+                    <div class="assetItem">
+                        <p class="assetCout">
+                            <span class="unit">¥</span>
+                            <span class="value">0</span>
+                        </p>
+                        <p class="assetName">津贴</p>
+                    </div>
+                    <div class="assetItem">
+                        <p class="assetCout">
+                            <!-- <span class="unit">¥</span> -->
+                            <span class="value">0</span>
+                        </p>
+                        <p class="assetName">礼品卡</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m-uMenu">
+                <ul class="list">
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">我的订单</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">账号管理</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">我的手机号</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">周六一起拼</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">售后管理</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">邀请返利</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">优先购</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">积分中心</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">会员俱乐部</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">地址管理</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">支付安全</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">帮助与客服</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href class="m-uMenuItem">
+                            <i class="img-u-icon-ulist"></i>
+                            <span class="txt">意见与反馈</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="g-row">
+                <button class="w-button" @click="exitdenglu">退出登录</button>
+            </div>
+        </div>
     </div>
 </template>
 
 <script scoped>
 export default {
     data() {
-        return {
-            componentName: "first",
-        };
+        return {};
     },
     computed: {
         isexist() {
             return this.$store.state.isexist;
         },
+        bottomButton() {
+            return this.$store.state.bottomButton;
+        },
+        isdenglu() {
+            return this.$store.state.isdenglu;
+        },
+        componentName() {
+            return this.$store.state.componentName;
+        },
     },
     methods: {
+        exitdenglu() {
+            this.$store.state.isdenglu = false;
+            this.$store.state.bottomButton = false;
+            this.$store.state.componentName = "first";
+            this.$store.state.bottomButton = true;
+        },
         deltopbar() {
             this.$store.commit("deltopbar");
         },
+        tohomepage() {
+            this.$store.state.componentName = "first";
+            this.$store.state.bottomButton = true;
+        },
+    },
+    created() {
+        if (this.$store.state.isdenglu == false) {
+            this.$store.state.bottomButton = false;
+        }
+        if (this.$store.state.isdenglu == true) {
+            this.$store.state.bottomButton = true;
+        }
     },
 };
 </script>
 
 <style scoped>
+.page4 {
+    height: 100%;
+    overflow-y: scroll;
+}
 .m-loginTypes {
-    flex-grow: 1;
+    height: 100%;
     background: rgb(247, 247, 247);
+    position: relative;
 }
 .bd {
     height: 1.16rem;
@@ -116,15 +294,15 @@ export default {
     justify-content: space-between;
 }
 .u-icon-u-icon-home {
-    background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp");
     width: 0.64rem;
     height: 0.58667rem;
+    background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp");
     background-position: 0 -0.98667rem;
-    background-position-x: 0px;
-    background-position-y: -0.98667rem;
     background-size: 2.29333rem 5.6rem;
 }
 .row .logo {
+    width: 2.29333rem;
+    height: 0.72rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -132,8 +310,6 @@ export default {
     left: 0;
     margin: auto;
     background-image: url("https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/hd-s2b74eb7db6-33f7d74f48.png?imageView&type=webp");
-    width: 2.29333rem;
-    height: 0.72rem;
     background-position: 0 -1.70667rem;
     background-repeat: no-repeat;
     background-size: 2.29333rem 5.6rem;
@@ -151,6 +327,7 @@ export default {
     display: inline-block;
     vertical-align: middle;
     background-repeat: no-repeat;
+    margin-right: 0.26667rem;
 }
 .u-icon-cart {
     position: relative;
@@ -193,10 +370,8 @@ export default {
     border-bottom-left-radius: 2px;
     border: 0 solid #dd1a21;
     background-color: #dd1a21;
-
     width: 100%;
     height: 1.25333rem;
-
     text-align: center;
 }
 .u-icon-loginphone {
@@ -259,9 +434,13 @@ span {
     width: 0.53333rem;
     height: 0.53333rem;
 }
-.thirdWrap {
-    width: 80%;
-    margin: 0 auto;
+.m-loginTypes .thirdWrap {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 1.06667rem;
+    height: 0.53333rem;
+    text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -311,5 +490,163 @@ span {
     width: 0.53333rem;
     height: 0.53333rem;
     font-style: normal;
+}
+.profile {
+    height: 100%;
+    overflow-y: scroll;
+}
+.m-profile {
+    background-image: url(//yanxuan.nosdn.127.net/5905098f74e04c39fa5e76ebb9ff591b.png?imageView&type=webp);
+    background-size: 100%;
+    height: 3.6rem;
+    overflow: hidden;
+    background-position: bottom center;
+}
+.avatar {
+    vertical-align: middle;
+    width: 1.89333rem;
+    height: 1.89333rem;
+    border-radius: 50%;
+}
+.left {
+    display: flex;
+    padding: 0.85333rem 0;
+    width: 7.2rem;
+    margin-left: 20px;
+}
+.info {
+    margin-left: 0.4rem;
+    line-height: 1;
+    overflow: hidden;
+}
+.left .nickname {
+    width: 4.5rem;
+    color: #fff;
+    font-size: 0.48rem;
+    line-height: 2.2;
+    text-align: left;
+    margin-bottom: 0.13333rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.membershipLevel {
+    color: #fff;
+    font-size: 0.37333rem;
+    vertical-align: middle;
+    line-height: 0;
+}
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 2.8rem;
+    padding-left: 0.22667rem;
+    height: 100%;
+}
+.surveryIcon {
+    width: 0.58667rem;
+    height: 0.58667rem;
+    position: absolute;
+    top: -2.65333rem;
+    left: 7.5rem;
+}
+.icon-qrCodeInUcenter {
+    position: absolute;
+    right: -6.81333rem;
+    top: -2.708667rem;
+    width: 0.85333rem;
+    height: 0.85333rem;
+    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-s7e83b8ad5c-083f9c5dc0.png?imageView&type=webp);
+    background-size: 1.12rem 19.30667rem;
+}
+.m-myAsset .tt {
+    margin-left: 0.4rem;
+    border-bottom: 0.01333rem solid #d9d9d9;
+    text-align: left;
+    line-height: 1.38667rem;
+    font-size: 0.37333rem;
+}
+.assetList {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.26667rem solid #f4f4f4;
+}
+.assetItem {
+    padding-top: 0.42667rem;
+    height: 2.13333rem;
+    flex-shrink: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+.assetCout {
+    margin-bottom: 0.05333rem;
+    font-size: 0.42667rem;
+    line-height: 0.64rem;
+    font-weight: 700;
+}
+.assetCout > .unit {
+    margin-right: 0.05333rem;
+    font-size: 0.32rem;
+    line-height: 0.48rem;
+    color: #333;
+}
+.value {
+    font-weight: bold;
+    font-size: 0.5rem;
+    color: #333;
+}
+.m-uMenu {
+    margin-bottom: 0.53333rem;
+    background: #fff;
+}
+.list {
+    zoom: 1;
+}
+.list > .item {
+    float: left;
+    width: 33.33333%;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    list-style: none;
+}
+.m-uMenuItem {
+    display: block;
+    height: 2.4rem;
+    padding-top: 0.6rem;
+    text-align: center;
+}
+.img-u-icon-ulist {
+    background-position: 0 -10.81333rem;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/ucenter-s7e83b8ad5c-083f9c5dc0.png?imageView&type=webp);
+    background-size: 1.12rem 19.30667rem;
+    width: 0.66667rem;
+    height: 0.66667rem;
+    vertical-align: middle;
+    margin-bottom: 0.21333rem;
+}
+.txt {
+    display: block;
+    font-size: 0.32rem;
+    line-height: 0.45333rem;
+    color: #333;
+}
+.w-button {
+    display: block;
+    width: 100%;
+    line-height: 1.28rem;
+    border: 1px solid #fff;
+    border-top: 0.2333rem solid #d9d9d9;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    font-size: 0.37333rem;
+    border-radius: 4px;
+    overflow: hidden;
+    outline: none;
 }
 </style>
