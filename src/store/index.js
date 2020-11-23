@@ -9,7 +9,7 @@ const store = new Vuex.Store({
     isshow: true,
     cartlist: [],
     bottomButton: true,
-    isdenglu: true, // 是否登陆
+    isdenglu: false, // 是否登陆
     componentName: 'first',
     isactive3: true,
     cartnumber: 0,    //购物车数量
