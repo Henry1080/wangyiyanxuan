@@ -36,8 +36,11 @@
                 <div class="mycar">
                     <span class="left">购物车</span>
                     <div class="right2">
-                        <a href="https://m.you.163.com/coupon/cartCoupon" class="quan">领券</a>
-                        <span class="action">编辑</span>
+                        <div v-if="isbianji">
+                            <a href="https://m.you.163.com/coupon/cartCoupon" class="quan">领券</a>
+                            <span class="action" @click="bianji">编辑</span>
+                        </div>
+                        <span v-else class="action" @click="bianji">完成</span>
                     </div>
                 </div>
                 <div class="m-notice">
@@ -85,10 +88,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="sub">
+                <!-- 正常 -->
+                <div class="sub" v-if="isbianji">
                     <div class="left">
                         <div class="check check2" :class="{active:isAcitive}" @click="checktab"></div>
-                        <span class="text">已选(1)</span>
+                        <span class="text">已选({{yixuanze}})</span>
                     </div>
                     <div class="right">
                         <div class="price">
@@ -97,6 +101,14 @@
                         </div>
                         <div class="xiadan">下单</div>
                     </div>
+                </div>
+                <!-- 编辑 -->
+                <div class="bianji" v-else>
+                    <div class="left">
+                        <div class="check check2" :class="{active:isAcitive2}" @click="checktab2"></div>
+                        <span class="text">已选({{totalnumber}})</span>
+                    </div>
+                    <div class="right" :class="{active:totalnumber!=0}" @click="shanchu">删除所选</div>
                 </div>
             </div>
         </div>
@@ -107,7 +119,11 @@
 export default {
     data() {
         return {
-            isAcitive: false,
+            isAcitive: false, //默认勾选
+            isAcitive2: true, //默认不勾选
+            isbianji: true,   //是否编辑，默认非编辑状态
+            totalnumber: 0,   //总件数
+            yixuanze:1,    //已经选择数量 1
         };
     },
     computed: {
@@ -123,6 +139,9 @@ export default {
         total() {
             return this.$store.state.total;
         },
+        cartnumber(){
+            return this.$store.state.cartnumber
+        }
     },
     methods: {
         deltopbar() {
@@ -138,6 +157,45 @@ export default {
         },
         checktab() {
             this.isAcitive = !this.isAcitive;
+        },
+        checktab2() {
+            this.isAcitive2 = !this.isAcitive2;
+        },
+        // 编辑
+        bianji() {
+            this.isbianji = !this.isbianji;
+            this.isAcitive = true;
+        },
+        // 删除
+        shanchu(){
+            this.$store.state.cartlist.splice(0,1);
+            this.totalnumber = 0;
+            this.isAcitive2=true;
+            this.$store.state.cartnumber=0;
+            this.$store.state.total=0;
+            this.yixuanze=0;
+        }
+    },
+    watch: {
+        isAcitive(newVal, oldVal) {
+            if (newVal == false) {
+                this.isAcitive2 = false;
+                this.totalnumber = 1;
+            }
+            if (newVal == true) {
+                this.isAcitive2 = true;
+                this.totalnumber = 0;
+            }
+        },
+        isAcitive2(newVal, oldVal) {
+            if (newVal == false) {
+                this.isAcitive = false;
+                this.totalnumber = 1;
+            }
+            if (newVal == true) {
+                this.isAcitive = true;
+                this.totalnumber = 0;
+            }
         },
     },
 };
@@ -184,11 +242,13 @@ export default {
     margin-right: 0.4rem;
 }
 .mycar > .right2 {
-    display: flex;
-    align-items: center;
     font-size: 0.4rem;
 }
-.mycar > .right2 > .quan {
+.mycar > .right2 > div {
+    display: flex;
+    align-items: center;
+}
+.mycar > .right2 .quan {
     display: block;
     min-width: 0.82667rem;
     line-height: 0.4rem;
@@ -205,7 +265,7 @@ export default {
     margin-right: 0.4rem;
     position: relative;
 }
-.mycar > .right2 > .quan::before {
+.mycar > .right2 .quan::before {
     position: absolute;
     width: 0.21333rem;
     height: 0.21333rem;
@@ -216,7 +276,7 @@ export default {
     background-color: #fff;
     content: "";
 }
-.mycar > .right2 > .quan::after {
+.mycar > .right2 .quan::after {
     position: absolute;
     width: 0.21333rem;
     height: 0.21333rem;
@@ -521,7 +581,7 @@ export default {
 .sub > .right > .price {
     color: #dd1a21;
     font-size: 0.37333rem;
-    margin-right: .10667rem;
+    margin-right: 0.10667rem;
 }
 .sub > .right > .xiadan {
     width: 3.01333rem;
@@ -530,6 +590,36 @@ export default {
     font-size: 0.37333rem;
     text-align: center;
     color: #fff;
+    background-color: #dd1a21;
+}
+.bianji {
+    height: 1.57333rem;
+    background-color: #fff;
+    padding-left: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bianji > .left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.37333rem;
+    color: #7f7f7f;
+}
+.bianji > .left > .check2 {
+    margin-right: 0.21333rem;
+}
+.bianji > .right {
+    width: 3.01333rem;
+    height: 1.57333rem;
+    line-height: 1.57333rem;
+    font-size: 0.37333rem;
+    text-align: center;
+    color: #fff;
+    background-color: #ccc;
+}
+.bianji > .right.active {
     background-color: #dd1a21;
 }
 </style>

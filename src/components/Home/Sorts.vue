@@ -6,7 +6,7 @@
                 <span class="placeholder" @click="$router.push('/Search')">搜索商品, 共30000+款好物</span>
             </div>
         </div>
-        <div class="m-cateContainer" style="height: 549px;">
+        <div class="m-cateContainer">
             <div class="m-cateNavVertWrap">
                 <ul class="m-cateNavVert">
                     <li
@@ -213,13 +213,14 @@ export default {
 <style scoped>
 .middle-page {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden;
-    background: rgb(247, 247, 247);
 }
 .m-itemCateListHd {
-    display: -moz-flex;
+    flex-shrink: 0;
     display: flex;
-    -moz-align-items: center;
     align-items: center;
     height: 1.17333rem;
     padding: 0 0.4rem;
@@ -276,8 +277,9 @@ export default {
     bottom: 0;
 }
 .m-cateContainer {
+    flex-grow: 1;
     width: 100%;
-    overflow: auto;
+    overflow: scroll;
 }
 .m-cateNavVertWrap {
     float: left;
@@ -317,7 +319,7 @@ export default {
     padding: 0.4rem 0.4rem 0.28rem;
     height: 100%;
     background-color: #fff;
-    overflow: auto;
+    overflow: scroll;
 }
 .m-subCateList::-webkit-scrollbar {
     display: none;

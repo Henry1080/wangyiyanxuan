@@ -152,37 +152,7 @@
             "id": "01",
             "img": "https://yanxuan-item.nosdn.127.net/c4ee53599a21293c19c7c46ef1c8b38e.png?type=webp&imageView&quality=65&thumbnail=330x330",
             "name": "2020新果上市，南非碧根果仁 150克",
-            "price": "￥46",
-            "swiper": [
-                {
-                    "id": "01",
-                    "img": "https://yanxuan-item.nosdn.127.net/9cd26a0c0f09e9a1c00221f981a70398.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
-                },
-                {
-                    "id": "02",
-                    "img": "https://yanxuan-item.nosdn.127.net/97426eb4a0f380027b8ccf8262b42ece.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
-                },
-                {
-                    "id": "03",
-                    "img": "https://yanxuan-item.nosdn.127.net/d3fa178f7941876614fc47f14ed03e91.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
-                },
-                {
-                    "id": "04",
-                    "img": "https://yanxuan-item.nosdn.127.net/a5595e480dc72ca4e0ea698804d564fa.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
-                },
-                {
-                    "id": "05",
-                    "img": "https://yanxuan-item.nosdn.127.net/d1430013aa80d952f938e16258b23b6e.jpg?type=webp&imageView&quality=75&thumbnail=750x0"
-                }
-            ],
-            "price2":"43.7",
-            "haoping":"90.9%",
-            "liyou1":"大颗完整果仁，颗颗优等生",
-            "liyou2":"南非进口 ，肉厚饱满，奶香浓郁",
-            "liyou3":"告别剥壳烦恼，美味轻松享",
-            "jifen":"4积分",
-            "yixuanze":"150克x1",
-           "pingjia":"包装高端大气上档次，比之前那款严选包装的走心了，里面包装也很6奶香浓郁"
+            "price": "￥46"
         },
         {
             "id": "02",
